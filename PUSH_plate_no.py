@@ -28,7 +28,7 @@ GET_RESP_ETX_OFFSET = 58
 
 def push_plate_no(host, port, socket_timeout, send_buffer_size, recv_buffer_size, plate_no):
 
-    port=4700;
+    # port=4700;
 
     STX = 0x02
     CMD_G = "G"       # Character G = ascii 0x47

@@ -80,11 +80,13 @@ g_PNSAppServices_IPWhiteList = "" # IP White List for PNS App Services.
 
 # Lpr Parameter
 #===================
-camera_mapping_conf = config['CAMRERA_MAPPING']['Camera_list']
-lpr_ftp_server = config['CAMRERA_MAPPING']['lpr_ftp_server']
-lpr_ftp_user = config['CAMRERA_MAPPING']['lpr_ftp_user']
-lpr_ftp_pswd = config['CAMRERA_MAPPING']['lpr_ftp_pswd']
-lpr_ftp_folder = config['CAMRERA_MAPPING']['lpr_ftp_folder']
+camera_mapping_conf = config['LPR_MODULE']['Camera_list']
+lpr_ftp_server = config['LPR_MODULE']['lpr_ftp_server']
+lpr_ftp_user = config['LPR_MODULE']['lpr_ftp_user']
+lpr_ftp_pswd = config['LPR_MODULE']['lpr_ftp_pswd']
+lpr_ftp_folder = config['LPR_MODULE']['lpr_ftp_folder']
+LPR_CommModule_IP = config['LPR_MODULE']['LPR_CommModule_IP']
+LPR_CommModule_Port = int(config['LPR_MODULE']['LPR_CommModule_Port'])
 
 
 # Detect OS in order to detect LAN IP of localhost automatically
@@ -302,7 +304,7 @@ def v1_get_ticket():
 @app.route('/localagent/v1/push_plate_no', methods=['POST'])
 def push_plate_no():
 
-    print(request.data)
+    # print(request.data)
     plate_no = request.json['body']["result"]["PlateResult"]["license"]
     camera_id = request.json['body']["vzid"]["sn"]
     base64img = request.json['body']["result"]["PlateResult"]["imageFile"]
@@ -348,12 +350,12 @@ def push_plate_no():
     logger.info("Plateno=" + plate_no + "<<>>Camera_sn=" + camera_id+"<<>>Maxpark_camera_id="+maxpark_cam_id)
 
     logger.info("Communicating with Comms Module")
-    response = PUSH_plate_no.push_plate_no(MaxParkCommModule_IP,
-                                     MaxParkCommModule_Port,
-                                     SOCKET_TIMEOUT,
-                                     SEND_BUFFER_SIZE,
-                                     RECV_BUFFER_SIZE,
-                                     plate_no)
+    response = PUSH_plate_no.push_plate_no(LPR_CommModule_IP,
+                                           LPR_CommModule_Port,
+                                            SOCKET_TIMEOUT,
+                                            SEND_BUFFER_SIZE,
+                                            RECV_BUFFER_SIZE,
+                                            plate_no)
     logger.info("response : {0}".format(response))
 
     logger.info("Send to PNS Server")

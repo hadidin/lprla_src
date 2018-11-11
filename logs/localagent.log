@@ -29049,3 +29049,90 @@ UnboundLocalError: local variable 'maxpark_cam_id' referenced before assignment
 2018-11-09 20:45:44,395 root:main:195  > INFO: PNS App Services IP Address White List:
 2018-11-09 20:45:44,395 root:main:196  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
 2018-11-09 20:45:45,791 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+2018-11-11 19:10:45,273 root:main:190  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-11 19:10:45,273 root:main:197  > INFO: PNS App Services IP Address White List:
+2018-11-11 19:10:45,273 root:main:198  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-11 19:10:47,353 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+2018-11-11 19:14:37,086 root:push_plate_no:348  > INFO: 
+2018-11-11 19:14:37,087 root:push_plate_no:349  > INFO: --- v1_push plate no ---
+2018-11-11 19:14:37,087 root:push_plate_no:350  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-11 19:14:37,087 root:push_plate_no:352  > INFO: Communicating with Comms Module
+2018-11-11 19:14:37,087 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-11 19:14:37,106 root:push_plate_no:359  > INFO: response : [2, 69, 82, 79, 82, 71, 78, 89, 48, 49, 48, 49, 54, 102, 3]
+2018-11-11 19:14:37,106 root:push_plate_no:361  > INFO: Send to PNS Server
+2018-11-11 19:14:37,107 werkzeug:_log:88   > INFO: 127.0.0.1 - - [11/Nov/2018 19:14:37] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-11 19:15:42,423 root:main:190  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-11 19:15:42,423 root:main:197  > INFO: PNS App Services IP Address White List:
+2018-11-11 19:15:42,423 root:main:198  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-11 19:15:44,352 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+2018-11-11 19:15:47,448 root:push_plate_no:348  > INFO: 
+2018-11-11 19:15:47,448 root:push_plate_no:349  > INFO: --- v1_push plate no ---
+2018-11-11 19:15:47,448 root:push_plate_no:350  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-11 19:15:47,448 root:push_plate_no:352  > INFO: Communicating with Comms Module
+2018-11-11 19:15:47,449 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-11 19:15:47,450 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 358, in push_plate_no
+    plate_no)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\PUSH_plate_no.py", line 104, in push_plate_no
+    s.connect((host,port))
+TypeError: an integer is required (got type str)
+2018-11-11 19:15:47,452 werkzeug:_log:88   > INFO: 127.0.0.1 - - [11/Nov/2018 19:15:47] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-11 19:16:39,125 root:main:190  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-11 19:16:39,125 root:main:197  > INFO: PNS App Services IP Address White List:
+2018-11-11 19:16:39,125 root:main:198  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-11 19:16:41,083 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+2018-11-11 19:16:46,014 root:push_plate_no:348  > INFO: 
+2018-11-11 19:16:46,014 root:push_plate_no:349  > INFO: --- v1_push plate no ---
+2018-11-11 19:16:46,014 root:push_plate_no:350  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-11 19:16:46,014 root:push_plate_no:352  > INFO: Communicating with Comms Module
+2018-11-11 19:16:46,014 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-11 19:16:46,028 root:push_plate_no:359  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-11 19:16:46,029 root:push_plate_no:361  > INFO: Send to PNS Server
+2018-11-11 19:16:46,029 werkzeug:_log:88   > INFO: 127.0.0.1 - - [11/Nov/2018 19:16:46] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-11 19:17:09,004 root:push_plate_no:348  > INFO: 
+2018-11-11 19:17:09,004 root:push_plate_no:349  > INFO: --- v1_push plate no ---
+2018-11-11 19:17:09,004 root:push_plate_no:350  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-11 19:17:09,005 root:push_plate_no:352  > INFO: Communicating with Comms Module
+2018-11-11 19:17:09,005 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-11 19:17:09,008 root:push_plate_no:359  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-11 19:17:09,008 root:push_plate_no:361  > INFO: Send to PNS Server
+2018-11-11 19:17:09,009 werkzeug:_log:88   > INFO: 127.0.0.1 - - [11/Nov/2018 19:17:09] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-11 19:17:32,190 root:main:190  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-11 19:17:32,190 root:main:197  > INFO: PNS App Services IP Address White List:
+2018-11-11 19:17:32,190 root:main:198  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-11 19:17:37,335 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+2018-11-11 19:17:41,661 root:push_plate_no:348  > INFO: 
+2018-11-11 19:17:41,662 root:push_plate_no:349  > INFO: --- v1_push plate no ---
+2018-11-11 19:17:41,662 root:push_plate_no:350  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-11 19:17:41,662 root:push_plate_no:352  > INFO: Communicating with Comms Module
+2018-11-11 19:17:41,662 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-11 19:17:41,668 root:push_plate_no:359  > INFO: response : [2, 69, 82, 79, 82, 71, 78, 89, 48, 49, 48, 49, 54, 102, 3]
+2018-11-11 19:17:41,668 root:push_plate_no:361  > INFO: Send to PNS Server
+2018-11-11 19:17:41,669 werkzeug:_log:88   > INFO: 127.0.0.1 - - [11/Nov/2018 19:17:41] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-11 22:04:16,657 root:main:190  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-11 22:04:16,657 root:main:197  > INFO: PNS App Services IP Address White List:
+2018-11-11 22:04:16,657 root:main:198  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-11 22:04:17,936 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
