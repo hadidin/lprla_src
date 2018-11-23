@@ -1,8 +1,204 @@
-2018-11-13 12:43:32,495 root:main:190  > CRITICAL: 
+2018-11-23 12:17:11,953 root:push_plate_no:381  > INFO: 
+2018-11-23 12:17:11,956 root:push_plate_no:382  > INFO: --- v1_push plate no ---
+2018-11-23 12:17:11,956 root:push_plate_no:383  > INFO: Plateno=WAB6789<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=EN01
+2018-11-23 12:17:11,956 root:push_plate_no:385  > INFO: Communicating with Comms Module
+2018-11-23 12:17:11,957 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x75
+2018-11-23 12:17:12,011 root:push_plate_no:392  > INFO: response : SX
+2018-11-23 12:17:14,022 lpr_push_display:push_display:44   > WARNING: Timeout connecting to LPR Server
+2018-11-23 12:17:14,036 werkzeug:_log:88   > INFO: 127.0.0.1 - - [23/Nov/2018 12:17:14] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-23 12:22:19,583 root:main:203  > CRITICAL: 
  --- Application started & 'main' was called. This is not really Critical. --- 
 
-2018-11-13 12:43:32,500 root:main:197  > INFO: PNS App Services IP Address White List:
-2018-11-13 12:43:32,500 root:main:198  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
-2018-11-13 12:43:33,425 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
-2018-11-13 12:43:56,549 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 12:43:56] "GET /testget HTTP/1.1" 200 -
-2018-11-13 12:43:57,809 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 12:43:57] "GET /favicon.ico HTTP/1.1" 404 -
+2018-11-23 12:22:19,584 root:main:210  > INFO: PNS App Services IP Address White List:
+2018-11-23 12:22:19,584 root:main:211  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-23 12:22:20,663 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-23 12:22:31,247 root:push_plate_no:381  > INFO: 
+2018-11-23 12:22:31,247 root:push_plate_no:382  > INFO: --- v1_push plate no ---
+2018-11-23 12:22:31,247 root:push_plate_no:383  > INFO: Plateno=WAB6789<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=EN01
+2018-11-23 12:22:31,247 root:push_plate_no:385  > INFO: Communicating with Comms Module
+2018-11-23 12:22:31,248 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x75
+2018-11-23 12:22:31,270 root:push_plate_no:392  > INFO: response : SX
+2018-11-23 12:22:33,275 lpr_push_display:push_display:44   > WARNING: Timeout connecting to LPR Server
+2018-11-23 12:22:33,275 werkzeug:_log:88   > INFO: 127.0.0.1 - - [23/Nov/2018 12:22:33] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-23 12:22:45,944 root:main:203  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-23 12:22:45,944 root:main:210  > INFO: PNS App Services IP Address White List:
+2018-11-23 12:22:45,944 root:main:211  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-23 12:22:46,996 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-23 12:22:52,887 root:push_plate_no:381  > INFO: 
+2018-11-23 12:22:52,888 root:push_plate_no:382  > INFO: --- v1_push plate no ---
+2018-11-23 12:22:52,888 root:push_plate_no:383  > INFO: Plateno=WAB6789<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=EN02
+2018-11-23 12:22:52,888 root:push_plate_no:385  > INFO: Communicating with Comms Module
+2018-11-23 12:22:52,888 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x76
+2018-11-23 12:22:57,890 PUSH_plate_no:push_plate_no:139  > WARNING: Timeout. Close connection
+2018-11-23 12:22:57,890 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 391, in push_plate_no
+    plate_no,maxpark_cam_id)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\PUSH_plate_no.py", line 150, in push_plate_no
+    RECV_MSG = [ord(c) for c in msg]
+UnboundLocalError: local variable 'msg' referenced before assignment
+2018-11-23 12:22:57,892 werkzeug:_log:88   > INFO: 127.0.0.1 - - [23/Nov/2018 12:22:57] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-23 12:23:13,549 root:main:203  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-23 12:23:13,550 root:main:210  > INFO: PNS App Services IP Address White List:
+2018-11-23 12:23:13,550 root:main:211  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-23 12:23:14,642 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-23 12:23:21,210 root:push_plate_no:381  > INFO: 
+2018-11-23 12:23:21,210 root:push_plate_no:382  > INFO: --- v1_push plate no ---
+2018-11-23 12:23:21,210 root:push_plate_no:383  > INFO: Plateno=WAB6789<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=EN01
+2018-11-23 12:23:21,211 root:push_plate_no:385  > INFO: Communicating with Comms Module
+2018-11-23 12:23:21,211 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x75
+2018-11-23 12:23:21,224 root:push_plate_no:392  > INFO: response : SX
+2018-11-23 12:23:23,242 lpr_push_display:push_display:44   > WARNING: Timeout connecting to LPR Server
+2018-11-23 12:23:23,243 werkzeug:_log:88   > INFO: 127.0.0.1 - - [23/Nov/2018 12:23:23] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-23 14:14:52,233 root:main:203  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-23 14:14:52,233 root:main:210  > INFO: PNS App Services IP Address White List:
+2018-11-23 14:14:52,233 root:main:211  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-23 14:14:52,442 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-23 14:14:55,419 root:push_plate_no:381  > INFO: 
+2018-11-23 14:14:55,419 root:push_plate_no:382  > INFO: --- v1_push plate no ---
+2018-11-23 14:14:55,419 root:push_plate_no:383  > INFO: Plateno=WAB6789<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=EN01
+2018-11-23 14:14:55,419 root:push_plate_no:385  > INFO: Communicating with Comms Module
+2018-11-23 14:14:55,420 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x75
+2018-11-23 14:15:00,422 PUSH_plate_no:push_plate_no:139  > WARNING: Timeout. Close connection
+2018-11-23 14:15:00,422 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 391, in push_plate_no
+    plate_no,maxpark_cam_id)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\PUSH_plate_no.py", line 150, in push_plate_no
+    RECV_MSG = [ord(c) for c in msg]
+UnboundLocalError: local variable 'msg' referenced before assignment
+2018-11-23 14:15:00,425 werkzeug:_log:88   > INFO: 127.0.0.1 - - [23/Nov/2018 14:15:00] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-23 14:15:53,172 root:main:203  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-23 14:15:53,172 root:main:210  > INFO: PNS App Services IP Address White List:
+2018-11-23 14:15:53,172 root:main:211  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-23 14:15:53,379 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-23 14:16:02,525 root:push_plate_no:381  > INFO: 
+2018-11-23 14:16:02,525 root:push_plate_no:382  > INFO: --- v1_push plate no ---
+2018-11-23 14:16:02,525 root:push_plate_no:383  > INFO: Plateno=WAB6789<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=EN01
+2018-11-23 14:16:02,525 root:push_plate_no:385  > INFO: Communicating with Comms Module
+2018-11-23 14:16:02,525 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x75
+2018-11-23 14:16:02,527 PUSH_plate_no:push_plate_no:120  > ERROR: failed to sent packet to comm module
+2018-11-23 14:16:02,527 root:push_plate_no:392  > INFO: response : false
+2018-11-23 14:16:02,528 werkzeug:_log:88   > INFO: 127.0.0.1 - - [23/Nov/2018 14:16:02] "POST /localagent/v1/push_plate_no HTTP/1.1" 400 -
+2018-11-23 14:16:24,990 root:push_plate_no:381  > INFO: 
+2018-11-23 14:16:24,990 root:push_plate_no:382  > INFO: --- v1_push plate no ---
+2018-11-23 14:16:24,990 root:push_plate_no:383  > INFO: Plateno=WAB6789<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=EN01
+2018-11-23 14:16:24,990 root:push_plate_no:385  > INFO: Communicating with Comms Module
+2018-11-23 14:16:24,990 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x75
+2018-11-23 14:16:24,991 PUSH_plate_no:push_plate_no:120  > ERROR: failed to sent packet to comm module
+2018-11-23 14:16:24,991 root:push_plate_no:392  > INFO: response : false
+2018-11-23 14:16:24,992 werkzeug:_log:88   > INFO: 127.0.0.1 - - [23/Nov/2018 14:16:24] "POST /localagent/v1/push_plate_no HTTP/1.1" 400 -
+2018-11-23 14:16:49,137 root:main:203  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-23 14:16:49,137 root:main:210  > INFO: PNS App Services IP Address White List:
+2018-11-23 14:16:49,137 root:main:211  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-23 14:16:49,348 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-23 14:16:52,630 root:push_plate_no:381  > INFO: 
+2018-11-23 14:16:52,631 root:push_plate_no:382  > INFO: --- v1_push plate no ---
+2018-11-23 14:16:52,631 root:push_plate_no:383  > INFO: Plateno=WAB6789<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=EN01
+2018-11-23 14:16:52,631 root:push_plate_no:385  > INFO: Communicating with Comms Module
+2018-11-23 14:16:52,631 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x75
+2018-11-23 14:16:57,632 PUSH_plate_no:push_plate_no:139  > WARNING: Timeout. Close connection
+2018-11-23 14:16:57,632 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 391, in push_plate_no
+    plate_no,maxpark_cam_id)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\PUSH_plate_no.py", line 150, in push_plate_no
+    RECV_MSG = [ord(c) for c in msg]
+UnboundLocalError: local variable 'msg' referenced before assignment
+2018-11-23 14:16:57,634 werkzeug:_log:88   > INFO: 127.0.0.1 - - [23/Nov/2018 14:16:57] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-23 14:17:09,846 root:push_plate_no:381  > INFO: 
+2018-11-23 14:17:09,847 root:push_plate_no:382  > INFO: --- v1_push plate no ---
+2018-11-23 14:17:09,847 root:push_plate_no:383  > INFO: Plateno=WAB6789<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=EN01
+2018-11-23 14:17:09,847 root:push_plate_no:385  > INFO: Communicating with Comms Module
+2018-11-23 14:17:09,847 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x75
+2018-11-23 14:17:09,890 root:push_plate_no:392  > INFO: response : SX
+2018-11-23 14:17:11,912 lpr_push_display:push_display:44   > WARNING: Timeout connecting to LPR Server
+2018-11-23 14:17:11,912 werkzeug:_log:88   > INFO: 127.0.0.1 - - [23/Nov/2018 14:17:11] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-23 14:33:01,246 root:main:203  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-23 14:33:01,246 root:main:210  > INFO: PNS App Services IP Address White List:
+2018-11-23 14:33:01,247 root:main:211  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-23 14:33:01,454 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-23 14:33:16,680 root:push_plate_no:381  > INFO: 
+2018-11-23 14:33:16,680 root:push_plate_no:382  > INFO: --- v1_push plate no ---
+2018-11-23 14:33:16,680 root:push_plate_no:383  > INFO: Plateno=WAB6789<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=EN01
+2018-11-23 14:33:16,680 root:push_plate_no:385  > INFO: Communicating with Comms Module
+2018-11-23 14:33:16,681 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x75
+2018-11-23 14:33:16,707 root:push_plate_no:392  > INFO: response : SN
+2018-11-23 14:33:18,716 lpr_push_display:push_display:44   > WARNING: Timeout connecting to LPR Server
+2018-11-23 14:33:18,716 werkzeug:_log:88   > INFO: 127.0.0.1 - - [23/Nov/2018 14:33:18] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-23 14:33:40,558 root:main:203  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-23 14:33:40,559 root:main:210  > INFO: PNS App Services IP Address White List:
+2018-11-23 14:33:40,559 root:main:211  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-23 14:33:40,769 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-23 14:33:47,303 root:push_plate_no:381  > INFO: 
+2018-11-23 14:33:47,304 root:push_plate_no:382  > INFO: --- v1_push plate no ---
+2018-11-23 14:33:47,304 root:push_plate_no:383  > INFO: Plateno=WAB6789<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=EN01
+2018-11-23 14:33:47,304 root:push_plate_no:385  > INFO: Communicating with Comms Module
+2018-11-23 14:33:47,304 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x75
+2018-11-23 14:33:47,324 root:push_plate_no:392  > INFO: response : SN
+2018-11-23 14:33:49,344 lpr_push_display:push_display:44   > WARNING: Timeout connecting to LPR Server
+2018-11-23 14:33:49,344 werkzeug:_log:88   > INFO: 127.0.0.1 - - [23/Nov/2018 14:33:49] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-23 14:35:02,159 root:main:203  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-23 14:35:02,159 root:main:210  > INFO: PNS App Services IP Address White List:
+2018-11-23 14:35:02,159 root:main:211  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-23 14:35:02,358 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-23 14:35:06,400 root:push_plate_no:381  > INFO: 
+2018-11-23 14:35:06,400 root:push_plate_no:382  > INFO: --- v1_push plate no ---
+2018-11-23 14:35:06,401 root:push_plate_no:383  > INFO: Plateno=WAB6789<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=EN01
+2018-11-23 14:35:06,401 root:push_plate_no:385  > INFO: Communicating with Comms Module
+2018-11-23 14:35:06,401 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x75
+2018-11-23 14:35:06,424 root:push_plate_no:392  > INFO: response : SX
+2018-11-23 14:35:08,454 lpr_push_display:push_display:44   > WARNING: Timeout connecting to LPR Server
+2018-11-23 14:35:08,454 werkzeug:_log:88   > INFO: 127.0.0.1 - - [23/Nov/2018 14:35:08] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -

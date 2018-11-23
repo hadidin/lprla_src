@@ -1,0 +1,1559 @@
+2018-11-13 15:04:56,501 root:push_plate_no:348  > INFO: 
+2018-11-13 15:04:56,501 root:push_plate_no:349  > INFO: --- v1_push plate no ---
+2018-11-13 15:04:56,501 root:push_plate_no:350  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 15:04:56,501 root:push_plate_no:352  > INFO: Communicating with Comms Module
+2018-11-13 15:04:56,501 PUSH_plate_no:push_plate_no:43   > INFO: Current LocalAgent time : 2018-11-13 15:04:56.501675
+2018-11-13 15:04:56,502 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 15:04:56,503 PUSH_plate_no:push_plate_no:98   > INFO: try to connect to socket
+2018-11-13 15:04:56,503 PUSH_plate_no:push_plate_no:106  > INFO: socket created
+2018-11-13 15:04:57,517 PUSH_plate_no:push_plate_no:117  > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 15:05:02,518 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 358, in push_plate_no
+    plate_no)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\PUSH_plate_no.py", line 128, in push_plate_no
+    data_sent = s.send(my_PACKET)
+socket.timeout: timed out
+2018-11-13 15:05:02,519 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 15:05:02] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 15:08:12,157 root:main:190  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 15:08:12,157 root:main:197  > INFO: PNS App Services IP Address White List:
+2018-11-13 15:08:12,157 root:main:198  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 15:08:12,529 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 15:08:19,517 root:push_plate_no:348  > INFO: 
+2018-11-13 15:08:19,517 root:push_plate_no:349  > INFO: --- v1_push plate no ---
+2018-11-13 15:08:19,517 root:push_plate_no:350  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 15:08:19,517 root:push_plate_no:352  > INFO: Communicating with Comms Module
+2018-11-13 15:08:19,518 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 15:08:20,520 PUSH_plate_no:push_plate_no:112  > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 15:08:25,520 PUSH_plate_no:push_plate_no:127  > ERROR: failed to sent data to comm module
+2018-11-13 15:08:30,520 PUSH_plate_no:push_plate_no:141  > WARNING: Timeout. Close connection
+2018-11-13 15:08:30,520 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 358, in push_plate_no
+    plate_no)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\PUSH_plate_no.py", line 153, in push_plate_no
+    RECV_MSG = [ord(c) for c in msg]
+UnboundLocalError: local variable 'msg' referenced before assignment
+2018-11-13 15:08:30,522 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 15:08:30] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 15:10:00,925 root:main:190  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 15:10:00,925 root:main:197  > INFO: PNS App Services IP Address White List:
+2018-11-13 15:10:00,925 root:main:198  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 15:10:01,219 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 15:10:06,203 root:push_plate_no:348  > INFO: 
+2018-11-13 15:10:06,203 root:push_plate_no:349  > INFO: --- v1_push plate no ---
+2018-11-13 15:10:06,204 root:push_plate_no:350  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 15:10:06,204 root:push_plate_no:352  > INFO: Communicating with Comms Module
+2018-11-13 15:10:06,204 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 15:10:07,215 PUSH_plate_no:push_plate_no:112  > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 15:10:12,216 PUSH_plate_no:push_plate_no:127  > ERROR: failed to sent data to comm module
+2018-11-13 15:10:12,216 root:push_plate_no:359  > INFO: response : failed to connect to comm module
+2018-11-13 15:10:12,216 root:push_plate_no:361  > INFO: Send to PNS Server
+2018-11-13 15:10:12,217 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 15:10:12] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 15:15:11,403 root:main:190  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 15:15:11,403 root:main:197  > INFO: PNS App Services IP Address White List:
+2018-11-13 15:15:11,403 root:main:198  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 15:15:11,611 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 15:15:17,439 root:push_plate_no:348  > INFO: 
+2018-11-13 15:15:17,439 root:push_plate_no:349  > INFO: --- v1_push plate no ---
+2018-11-13 15:15:17,439 root:push_plate_no:350  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 15:15:17,439 root:push_plate_no:352  > INFO: Communicating with Comms Module
+2018-11-13 15:15:17,440 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 15:15:18,442 PUSH_plate_no:push_plate_no:112  > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 15:15:23,442 PUSH_plate_no:push_plate_no:127  > ERROR: failed to sent packet to comm module
+2018-11-13 15:15:23,443 root:push_plate_no:359  > INFO: response : false
+2018-11-13 15:15:23,443 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 15:15:23] "POST /localagent/v1/push_plate_no HTTP/1.1" 400 -
+2018-11-13 15:17:11,142 root:push_plate_no:348  > INFO: 
+2018-11-13 15:17:11,143 root:push_plate_no:349  > INFO: --- v1_push plate no ---
+2018-11-13 15:17:11,143 root:push_plate_no:350  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 15:17:11,143 root:push_plate_no:352  > INFO: Communicating with Comms Module
+2018-11-13 15:17:11,143 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 15:17:11,206 root:push_plate_no:359  > INFO: response : [2, 69, 82, 79, 82, 71, 78, 89, 48, 49, 48, 49, 54, 102, 3]
+2018-11-13 15:17:11,207 root:push_plate_no:375  > INFO: Send to PNS Server
+2018-11-13 15:17:11,207 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 15:17:11] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 15:17:28,917 root:push_plate_no:348  > INFO: 
+2018-11-13 15:17:28,917 root:push_plate_no:349  > INFO: --- v1_push plate no ---
+2018-11-13 15:17:28,917 root:push_plate_no:350  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 15:17:28,918 root:push_plate_no:352  > INFO: Communicating with Comms Module
+2018-11-13 15:17:28,918 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 15:17:28,924 root:push_plate_no:359  > INFO: response : [2, 69, 82, 79, 82, 71, 78, 89, 48, 49, 48, 49, 54, 102, 3]
+2018-11-13 15:17:28,924 root:push_plate_no:375  > INFO: Send to PNS Server
+2018-11-13 15:17:28,925 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 15:17:28] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 15:17:40,659 root:push_plate_no:348  > INFO: 
+2018-11-13 15:17:40,660 root:push_plate_no:349  > INFO: --- v1_push plate no ---
+2018-11-13 15:17:40,660 root:push_plate_no:350  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 15:17:40,660 root:push_plate_no:352  > INFO: Communicating with Comms Module
+2018-11-13 15:17:40,660 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 15:17:41,662 PUSH_plate_no:push_plate_no:112  > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 15:17:46,662 PUSH_plate_no:push_plate_no:127  > ERROR: failed to sent packet to comm module
+2018-11-13 15:17:46,662 root:push_plate_no:359  > INFO: response : false
+2018-11-13 15:17:46,663 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 15:17:46] "POST /localagent/v1/push_plate_no HTTP/1.1" 400 -
+2018-11-13 15:25:26,497 root:main:190  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 15:25:26,497 root:main:197  > INFO: PNS App Services IP Address White List:
+2018-11-13 15:25:26,497 root:main:198  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 15:25:26,766 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 15:26:05,934 root:push_plate_no:348  > INFO: 
+2018-11-13 15:26:05,934 root:push_plate_no:349  > INFO: --- v1_push plate no ---
+2018-11-13 15:26:05,935 root:push_plate_no:350  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 15:26:05,935 root:push_plate_no:352  > INFO: Communicating with Comms Module
+2018-11-13 15:26:05,935 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 15:26:06,008 root:push_plate_no:359  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 15:26:06,008 root:push_plate_no:375  > INFO: Send to PNS Server
+2018-11-13 15:26:06,009 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 15:26:06] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 15:59:19,599 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 15:59:19,600 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 15:59:19,600 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 15:59:19,807 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 16:00:35,346 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 16:00:35,346 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 16:00:35,346 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 16:00:35,579 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 16:00:49,869 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 16:00:49,869 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 16:00:49,869 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 16:00:50,063 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 16:01:27,847 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 16:01:27,847 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 16:01:27,847 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 16:01:28,069 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 16:02:11,309 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 16:02:11,310 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 16:02:11,310 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 16:03:47,377 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 16:03:47,377 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 16:03:47,377 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 16:03:47,377 COMM_LISTENER:COMM_LISTENER:43   > INFO: connecting to comm module listener
+2018-11-13 16:03:47,377 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x24
+2018-11-13 16:03:52,378 COMM_LISTENER:COMM_LISTENER:109  > WARNING: Timeout. Close connection
+2018-11-13 16:03:52,576 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 16:03:59,149 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 16:03:59,149 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 16:03:59,149 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 16:03:59,149 COMM_LISTENER:COMM_LISTENER:43   > INFO: connecting to comm module listener
+2018-11-13 16:03:59,149 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x24
+2018-11-13 16:04:04,150 COMM_LISTENER:COMM_LISTENER:109  > WARNING: Timeout. Close connection
+2018-11-13 16:04:04,398 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 16:04:50,996 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 16:04:50,996 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 16:04:50,996 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 16:04:50,997 COMM_LISTENER:COMM_LISTENER:43   > INFO: connecting to comm module listener
+2018-11-13 16:04:50,997 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x24
+2018-11-13 16:04:56,008 COMM_LISTENER:COMM_LISTENER:109  > WARNING: Timeout. Close connection
+2018-11-13 16:04:56,201 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 16:05:02,186 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 16:05:02,186 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 16:05:02,186 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 16:05:02,187 COMM_LISTENER:COMM_LISTENER:43   > INFO: connecting to comm module listener
+2018-11-13 16:05:02,187 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x24
+2018-11-13 16:05:07,188 COMM_LISTENER:COMM_LISTENER:109  > WARNING: Timeout. Close connection
+2018-11-13 16:05:07,390 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 16:30:09,658 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 16:30:09,658 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 16:30:09,658 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 16:30:10,672 COMM_LISTENER:COMM_LISTENER:79   > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 16:30:11,683 COMM_LISTENER:COMM_LISTENER:79   > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 16:30:12,696 COMM_LISTENER:COMM_LISTENER:79   > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 16:30:13,709 COMM_LISTENER:COMM_LISTENER:79   > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 16:30:14,711 COMM_LISTENER:COMM_LISTENER:79   > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 16:30:15,724 COMM_LISTENER:COMM_LISTENER:79   > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 16:30:16,736 COMM_LISTENER:COMM_LISTENER:79   > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 16:40:30,260 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 16:40:30,261 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 16:40:30,261 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 16:40:31,262 COMM_LISTENER:COMM_LISTENER:79   > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 16:40:32,274 COMM_LISTENER:COMM_LISTENER:79   > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 16:40:33,284 COMM_LISTENER:COMM_LISTENER:79   > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 16:40:34,286 COMM_LISTENER:COMM_LISTENER:79   > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 16:40:35,301 COMM_LISTENER:COMM_LISTENER:79   > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 16:40:36,313 COMM_LISTENER:COMM_LISTENER:79   > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 16:40:37,325 COMM_LISTENER:COMM_LISTENER:79   > WARNING: Connection error: [WinError 10061] No connection could be made because the target machine actively refused it
+2018-11-13 16:41:06,892 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 16:41:06,893 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 16:41:06,893 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 16:42:00,020 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 16:42:00,021 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 16:42:00,021 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 16:42:19,285 COMM_LISTENER:COMM_LISTENER:97   > INFO: Received STX
+2018-11-13 16:42:19,285 COMM_LISTENER:COMM_LISTENER:123  > INFO: Received CMD PN
+2018-11-13 16:42:19,285 COMM_LISTENER:COMM_LISTENER:130  > INFO: Received CMD -> PN_TICKET: 56100001
+2018-11-13 16:42:19,286 COMM_LISTENER:COMM_LISTENER:133  > INFO: Received CMD -> PN_SIZE: 24
+2018-11-13 16:42:19,286 COMM_LISTENER:COMM_LISTENER:142  > INFO: Received CMD -> PN_IDQR: kiplePark@testhantardata
+2018-11-13 16:42:19,286 COMM_LISTENER:COMM_LISTENER:183  > WARNING: Other error recv strCMD_PN
+2018-11-13 16:43:19,789 COMM_LISTENER:COMM_LISTENER:99   > INFO: Timeout warning recv STX: timed out
+2018-11-13 17:09:45,871 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 17:09:45,871 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 17:09:45,871 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 17:09:46,084 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 17:10:03,698 root:push_plate_no:384  > INFO: 
+2018-11-13 17:10:03,698 root:push_plate_no:385  > INFO: --- v1_push plate no ---
+2018-11-13 17:10:03,699 root:push_plate_no:386  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:10:03,699 root:push_plate_no:388  > INFO: Communicating with Comms Module
+2018-11-13 17:10:03,699 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:10:03,704 root:push_plate_no:395  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:10:03,705 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:10:03] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 17:10:32,514 root:push_plate_no:384  > INFO: 
+2018-11-13 17:10:32,515 root:push_plate_no:385  > INFO: --- v1_push plate no ---
+2018-11-13 17:10:32,515 root:push_plate_no:386  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:10:32,515 root:push_plate_no:388  > INFO: Communicating with Comms Module
+2018-11-13 17:10:32,515 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:10:32,521 root:push_plate_no:395  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:10:32,521 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:10:32] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 17:10:39,913 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 17:10:39,913 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 17:10:39,914 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 17:10:40,142 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 17:10:42,555 root:push_plate_no:384  > INFO: 
+2018-11-13 17:10:42,556 root:push_plate_no:385  > INFO: --- v1_push plate no ---
+2018-11-13 17:10:42,556 root:push_plate_no:386  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:10:42,556 root:push_plate_no:388  > INFO: Communicating with Comms Module
+2018-11-13 17:10:42,557 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:10:42,571 root:push_plate_no:395  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:10:42,572 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:10:42] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 17:36:15,208 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 17:36:15,209 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 17:36:15,209 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 17:36:15,428 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 17:36:20,210 root:push_plate_no:384  > INFO: 
+2018-11-13 17:36:20,210 root:push_plate_no:385  > INFO: --- v1_push plate no ---
+2018-11-13 17:36:20,210 root:push_plate_no:386  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:36:20,210 root:push_plate_no:388  > INFO: Communicating with Comms Module
+2018-11-13 17:36:20,210 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:36:20,225 root:push_plate_no:395  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:36:20,225 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 428, in push_plate_no
+    return jsonify(return_json), returnHttpStatus
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\json\__init__.py", line 321, in jsonify
+    dumps(data, indent=indent, separators=separators) + '\n',
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\json\__init__.py", line 179, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Python37-32\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Python37-32\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python37-32\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\json\__init__.py", line 81, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Python37-32\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable
+2018-11-13 17:36:20,273 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:36:20] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 17:36:53,279 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 17:36:53,279 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 17:36:53,279 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 17:36:53,483 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 17:36:57,365 root:push_plate_no:384  > INFO: 
+2018-11-13 17:36:57,366 root:push_plate_no:385  > INFO: --- v1_push plate no ---
+2018-11-13 17:36:57,366 root:push_plate_no:386  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:36:57,366 root:push_plate_no:388  > INFO: Communicating with Comms Module
+2018-11-13 17:36:57,366 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:36:57,385 root:push_plate_no:395  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:36:57,386 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 414, in push_plate_no
+    print('text led'+data)
+TypeError: can only concatenate str (not "bytes") to str
+2018-11-13 17:36:57,387 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:36:57] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 17:37:30,612 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 17:37:30,612 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 17:37:30,612 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 17:37:30,812 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 17:37:33,713 root:push_plate_no:384  > INFO: 
+2018-11-13 17:37:33,713 root:push_plate_no:385  > INFO: --- v1_push plate no ---
+2018-11-13 17:37:33,713 root:push_plate_no:386  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:37:33,713 root:push_plate_no:388  > INFO: Communicating with Comms Module
+2018-11-13 17:37:33,714 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:37:33,727 root:push_plate_no:395  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:37:33,727 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 414, in push_plate_no
+    print('text led'+data)
+TypeError: can only concatenate str (not "bytes") to str
+2018-11-13 17:37:33,728 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:37:33] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 17:38:09,406 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 17:38:09,407 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 17:38:09,407 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 17:38:09,680 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 17:38:12,371 root:push_plate_no:384  > INFO: 
+2018-11-13 17:38:12,371 root:push_plate_no:385  > INFO: --- v1_push plate no ---
+2018-11-13 17:38:12,371 root:push_plate_no:386  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:38:12,372 root:push_plate_no:388  > INFO: Communicating with Comms Module
+2018-11-13 17:38:12,372 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:38:12,389 root:push_plate_no:395  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:38:12,390 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 414, in push_plate_no
+    print('text led'+data.tostring())
+AttributeError: 'bytes' object has no attribute 'tostring'
+2018-11-13 17:38:12,392 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:38:12] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 17:39:26,855 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 17:39:26,856 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 17:39:26,856 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 17:39:27,165 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 17:39:31,560 root:push_plate_no:384  > INFO: 
+2018-11-13 17:39:31,561 root:push_plate_no:385  > INFO: --- v1_push plate no ---
+2018-11-13 17:39:31,561 root:push_plate_no:386  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:39:31,561 root:push_plate_no:388  > INFO: Communicating with Comms Module
+2018-11-13 17:39:31,561 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:39:31,580 root:push_plate_no:395  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:39:31,580 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:39:31] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 17:40:02,907 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 17:40:02,907 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 17:40:02,907 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 17:40:03,131 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 17:40:06,683 root:push_plate_no:384  > INFO: 
+2018-11-13 17:40:06,684 root:push_plate_no:385  > INFO: --- v1_push plate no ---
+2018-11-13 17:40:06,684 root:push_plate_no:386  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:40:06,684 root:push_plate_no:388  > INFO: Communicating with Comms Module
+2018-11-13 17:40:06,684 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:40:06,698 root:push_plate_no:395  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:40:06,698 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 413, in push_plate_no
+    data = base64.b64encode(b+string)
+NameError: name 'b' is not defined
+2018-11-13 17:40:06,701 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:40:06] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 17:41:23,527 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 17:41:23,527 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 17:41:23,527 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 17:41:23,778 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 17:41:26,805 root:push_plate_no:384  > INFO: 
+2018-11-13 17:41:26,806 root:push_plate_no:385  > INFO: --- v1_push plate no ---
+2018-11-13 17:41:26,806 root:push_plate_no:386  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:41:26,806 root:push_plate_no:388  > INFO: Communicating with Comms Module
+2018-11-13 17:41:26,806 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:41:26,821 root:push_plate_no:395  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:41:26,821 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:41:26] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 17:46:54,785 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 17:46:54,785 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 17:46:54,785 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 17:46:54,992 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 17:46:58,274 root:push_plate_no:384  > INFO: 
+2018-11-13 17:46:58,274 root:push_plate_no:385  > INFO: --- v1_push plate no ---
+2018-11-13 17:46:58,274 root:push_plate_no:386  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:46:58,274 root:push_plate_no:388  > INFO: Communicating with Comms Module
+2018-11-13 17:46:58,275 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:46:58,291 root:push_plate_no:395  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:46:58,291 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 414, in push_plate_no
+    data = base64.b64encode(b'%s'% string)
+TypeError: %b requires a bytes-like object, or an object that implements __bytes__, not 'str'
+2018-11-13 17:46:58,293 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:46:58] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 17:49:06,585 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 17:49:06,585 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 17:49:06,586 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 17:49:06,794 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 17:49:09,693 root:push_plate_no:384  > INFO: 
+2018-11-13 17:49:09,693 root:push_plate_no:385  > INFO: --- v1_push plate no ---
+2018-11-13 17:49:09,694 root:push_plate_no:386  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:49:09,694 root:push_plate_no:388  > INFO: Communicating with Comms Module
+2018-11-13 17:49:09,694 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:49:09,714 root:push_plate_no:395  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:49:09,714 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 414, in push_plate_no
+    data = base64.b64encode(string2encode)
+  File "C:\Python37-32\lib\base64.py", line 58, in b64encode
+    encoded = binascii.b2a_base64(s, newline=False)
+TypeError: a bytes-like object is required, not 'str'
+2018-11-13 17:49:09,740 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:49:09] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 17:51:47,933 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 17:51:47,933 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 17:51:47,933 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 17:51:48,142 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 17:51:51,025 root:push_plate_no:384  > INFO: 
+2018-11-13 17:51:51,025 root:push_plate_no:385  > INFO: --- v1_push plate no ---
+2018-11-13 17:51:51,026 root:push_plate_no:386  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:51:51,026 root:push_plate_no:388  > INFO: Communicating with Comms Module
+2018-11-13 17:51:51,026 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:51:51,043 root:push_plate_no:395  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:51:51,043 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:51:51] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 17:52:10,084 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 17:52:10,084 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 17:52:10,084 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 17:52:10,474 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 17:52:14,468 root:push_plate_no:384  > INFO: 
+2018-11-13 17:52:14,469 root:push_plate_no:385  > INFO: --- v1_push plate no ---
+2018-11-13 17:52:14,469 root:push_plate_no:386  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:52:14,469 root:push_plate_no:388  > INFO: Communicating with Comms Module
+2018-11-13 17:52:14,469 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:52:14,482 root:push_plate_no:395  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:52:14,483 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:52:14] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 17:54:14,108 root:main:193  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 17:54:14,109 root:main:200  > INFO: PNS App Services IP Address White List:
+2018-11-13 17:54:14,109 root:main:201  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 17:54:14,327 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 17:54:20,068 root:push_plate_no:384  > INFO: 
+2018-11-13 17:54:20,068 root:push_plate_no:385  > INFO: --- v1_push plate no ---
+2018-11-13 17:54:20,068 root:push_plate_no:386  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:54:20,068 root:push_plate_no:388  > INFO: Communicating with Comms Module
+2018-11-13 17:54:20,069 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:54:20,086 root:push_plate_no:395  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:54:20,087 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:54:20] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 17:58:46,477 root:main:194  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 17:58:46,477 root:main:201  > INFO: PNS App Services IP Address White List:
+2018-11-13 17:58:46,477 root:main:202  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 17:58:46,695 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 17:58:49,542 root:push_plate_no:385  > INFO: 
+2018-11-13 17:58:49,542 root:push_plate_no:386  > INFO: --- v1_push plate no ---
+2018-11-13 17:58:49,542 root:push_plate_no:387  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 17:58:49,542 root:push_plate_no:389  > INFO: Communicating with Comms Module
+2018-11-13 17:58:49,542 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 17:58:49,561 root:push_plate_no:396  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 17:58:49,561 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 17:58:49] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 18:11:00,267 root:push_plate_no:385  > INFO: 
+2018-11-13 18:11:00,267 root:push_plate_no:386  > INFO: --- v1_push plate no ---
+2018-11-13 18:11:00,268 root:push_plate_no:387  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 18:11:00,268 root:push_plate_no:389  > INFO: Communicating with Comms Module
+2018-11-13 18:11:00,268 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 18:11:00,286 root:push_plate_no:396  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 18:11:00,287 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 18:11:00] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 18:11:05,709 root:push_plate_no:385  > INFO: 
+2018-11-13 18:11:05,710 root:push_plate_no:386  > INFO: --- v1_push plate no ---
+2018-11-13 18:11:05,710 root:push_plate_no:387  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 18:11:05,710 root:push_plate_no:389  > INFO: Communicating with Comms Module
+2018-11-13 18:11:05,710 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 18:11:05,724 root:push_plate_no:396  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 18:11:05,725 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 18:11:05] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 18:12:51,211 root:push_plate_no:385  > INFO: 
+2018-11-13 18:12:51,212 root:push_plate_no:386  > INFO: --- v1_push plate no ---
+2018-11-13 18:12:51,212 root:push_plate_no:387  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 18:12:51,212 root:push_plate_no:389  > INFO: Communicating with Comms Module
+2018-11-13 18:12:51,212 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 18:12:51,233 root:push_plate_no:396  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 18:12:51,233 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 18:12:51] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 18:17:59,523 root:main:194  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 18:17:59,523 root:main:201  > INFO: PNS App Services IP Address White List:
+2018-11-13 18:17:59,523 root:main:202  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 18:17:59,742 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 18:18:24,179 root:push_plate_no:385  > INFO: 
+2018-11-13 18:18:24,180 root:push_plate_no:386  > INFO: --- v1_push plate no ---
+2018-11-13 18:18:24,180 root:push_plate_no:387  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 18:18:24,180 root:push_plate_no:389  > INFO: Communicating with Comms Module
+2018-11-13 18:18:24,180 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 18:18:24,199 root:push_plate_no:396  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 18:18:24,199 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 18:18:24] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 18:20:47,147 root:main:194  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 18:20:47,148 root:main:201  > INFO: PNS App Services IP Address White List:
+2018-11-13 18:20:47,148 root:main:202  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 18:20:47,354 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 18:20:50,290 root:push_plate_no:385  > INFO: 
+2018-11-13 18:20:50,290 root:push_plate_no:386  > INFO: --- v1_push plate no ---
+2018-11-13 18:20:50,291 root:push_plate_no:387  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 18:20:50,291 root:push_plate_no:389  > INFO: Communicating with Comms Module
+2018-11-13 18:20:50,291 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 18:20:50,309 root:push_plate_no:396  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 18:20:50,309 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 18:20:50] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 18:29:18,875 root:push_plate_no:385  > INFO: 
+2018-11-13 18:29:18,875 root:push_plate_no:386  > INFO: --- v1_push plate no ---
+2018-11-13 18:29:18,875 root:push_plate_no:387  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 18:29:18,875 root:push_plate_no:389  > INFO: Communicating with Comms Module
+2018-11-13 18:29:18,876 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 18:29:18,890 root:push_plate_no:396  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 18:29:18,890 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 18:29:18] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 18:34:52,620 root:main:194  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 18:34:52,621 root:main:201  > INFO: PNS App Services IP Address White List:
+2018-11-13 18:34:52,621 root:main:202  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 18:34:52,867 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 18:35:15,023 root:main:194  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 18:35:15,023 root:main:201  > INFO: PNS App Services IP Address White List:
+2018-11-13 18:35:15,023 root:main:202  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 18:35:15,226 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 18:35:20,820 root:push_plate_no:386  > INFO: 
+2018-11-13 18:35:20,820 root:push_plate_no:387  > INFO: --- v1_push plate no ---
+2018-11-13 18:35:20,821 root:push_plate_no:388  > INFO: Plateno=NY 01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 18:35:20,821 root:push_plate_no:390  > INFO: Communicating with Comms Module
+2018-11-13 18:35:20,821 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x46
+2018-11-13 18:35:20,835 root:push_plate_no:397  > INFO: response : [2, 71, 78, 89, 32, 48, 49, 48, 49, 54, 70, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 37, 3, 13]
+2018-11-13 18:35:20,836 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 18:35:20] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 18:36:05,097 root:main:194  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 18:36:05,097 root:main:201  > INFO: PNS App Services IP Address White List:
+2018-11-13 18:36:05,098 root:main:202  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 18:36:05,317 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 18:36:09,176 root:push_plate_no:386  > INFO: 
+2018-11-13 18:36:09,176 root:push_plate_no:387  > INFO: --- v1_push plate no ---
+2018-11-13 18:36:09,176 root:push_plate_no:388  > INFO: Plateno=NY 01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 18:36:09,176 root:push_plate_no:390  > INFO: Communicating with Comms Module
+2018-11-13 18:36:09,176 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x46
+2018-11-13 18:36:09,193 root:push_plate_no:397  > INFO: response : [2, 71, 78, 89, 32, 48, 49, 48, 49, 54, 70, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 37, 3, 13]
+2018-11-13 18:36:09,193 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 18:36:09] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 18:36:59,501 root:main:194  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 18:36:59,501 root:main:201  > INFO: PNS App Services IP Address White List:
+2018-11-13 18:36:59,501 root:main:202  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 18:36:59,708 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 18:37:02,657 root:push_plate_no:386  > INFO: 
+2018-11-13 18:37:02,657 root:push_plate_no:387  > INFO: --- v1_push plate no ---
+2018-11-13 18:37:02,657 root:push_plate_no:388  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 18:37:02,657 root:push_plate_no:390  > INFO: Communicating with Comms Module
+2018-11-13 18:37:02,657 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 18:37:02,671 root:push_plate_no:397  > INFO: response : [2, 71, 78, 89, 48, 49, 48, 49, 54, 102, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 18:37:02,672 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 18:37:02] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 18:55:47,023 root:main:194  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 18:55:47,023 root:main:201  > INFO: PNS App Services IP Address White List:
+2018-11-13 18:55:47,024 root:main:202  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 18:55:47,393 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 18:55:50,847 root:push_plate_no:387  > INFO: 
+2018-11-13 18:55:50,847 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 18:55:50,847 root:push_plate_no:389  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 18:55:50,848 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 18:55:50,848 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2d
+2018-11-13 18:55:50,871 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 48, 49, 54, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 40, 3, 13]
+2018-11-13 18:55:50,871 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 18:55:50] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:50:18,404 root:push_plate_no:387  > INFO: 
+2018-11-13 23:50:18,405 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:50:18,405 root:push_plate_no:389  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:50:18,405 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:50:18,405 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2d
+2018-11-13 23:50:18,420 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 48, 49, 54, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 40, 3, 13]
+2018-11-13 23:50:18,421 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:50:18] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:51:03,242 root:main:194  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 23:51:03,243 root:main:201  > INFO: PNS App Services IP Address White List:
+2018-11-13 23:51:03,243 root:main:202  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 23:51:04,912 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+2018-11-13 23:51:07,164 root:push_plate_no:387  > INFO: 
+2018-11-13 23:51:07,164 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:51:07,164 root:push_plate_no:389  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:51:07,165 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:51:07,165 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2d
+2018-11-13 23:51:07,180 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 48, 49, 54, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 40, 3, 13]
+2018-11-13 23:51:07,180 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:51:07] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:31,964 root:main:194  > CRITICAL: 
+ --- Application started & 'main' was called. This is not really Critical. --- 
+
+2018-11-13 23:52:31,964 root:main:201  > INFO: PNS App Services IP Address White List:
+2018-11-13 23:52:31,964 root:main:202  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
+2018-11-13 23:52:33,696 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+2018-11-13 23:52:34,402 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:34,403 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:34,403 root:push_plate_no:389  > INFO: Plateno=NY05055<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:52:34,403 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:34,403 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2e
+2018-11-13 23:52:34,419 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 53, 48, 53, 53, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 43, 3, 13]
+2018-11-13 23:52:34,419 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:34] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:34,489 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:34,490 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:34,490 root:push_plate_no:389  > INFO: Plateno=NY01411<<>>Camera_sn=66666666-66666666<<>>Maxpark_camera_id=1006
+2018-11-13 23:52:34,490 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:34,490 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x28
+2018-11-13 23:52:35,513 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 54, 78, 89, 48, 49, 52, 49, 49, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 45, 3, 13]
+2018-11-13 23:52:35,514 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:35] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:35,614 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:35,615 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:35,615 root:push_plate_no:389  > INFO: Plateno=A8888ZA<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:52:35,615 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:35,615 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x77
+2018-11-13 23:52:36,128 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 65, 56, 56, 56, 56, 90, 65, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 114, 3, 13]
+2018-11-13 23:52:36,129 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:36] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:36,360 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:36,361 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:36,361 root:push_plate_no:389  > INFO: Plateno=H8888ZX<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:52:36,361 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:36,361 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x66
+2018-11-13 23:52:37,375 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 72, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 99, 3, 13]
+2018-11-13 23:52:37,376 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:37] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:37,429 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:37,429 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:37,429 root:push_plate_no:389  > INFO: Plateno=NY01067<<>>Camera_sn=44444444-44444444<<>>Maxpark_camera_id=1004
+2018-11-13 23:52:37,430 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:37,430 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2f
+2018-11-13 23:52:38,447 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 52, 78, 89, 48, 49, 48, 54, 55, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 42, 3, 13]
+2018-11-13 23:52:38,447 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:38] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:38,511 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:38,511 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:38,512 root:push_plate_no:389  > INFO: Plateno=NY01115<<>>Camera_sn=77777777-77777777<<>>Maxpark_camera_id=1007
+2018-11-13 23:52:38,512 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:38,512 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x28
+2018-11-13 23:52:39,026 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 55, 78, 89, 48, 49, 49, 49, 53, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 45, 3, 13]
+2018-11-13 23:52:39,027 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:39] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:39,209 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:39,209 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:39,210 root:push_plate_no:389  > INFO: Plateno=BD95184<<>>Camera_sn=33333333-33333333<<>>Maxpark_camera_id=1003
+2018-11-13 23:52:39,210 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:39,210 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x38
+2018-11-13 23:52:40,224 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 51, 66, 68, 57, 53, 49, 56, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 61, 3, 13]
+2018-11-13 23:52:40,225 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:40] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:40,494 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:40,495 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:40,495 root:push_plate_no:389  > INFO: Plateno=NY01504<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:52:40,495 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:40,495 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2a
+2018-11-13 23:52:41,010 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 78, 89, 48, 49, 53, 48, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 47, 3, 13]
+2018-11-13 23:52:41,010 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:41] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:41,015 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 361, in push_plate_no
+    picture_name = lpr_ftp_folder + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
+UnboundLocalError: local variable 'maxpark_cam_id' referenced before assignment
+2018-11-13 23:52:41,060 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:41] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 23:52:41,128 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:41,128 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:41,128 root:push_plate_no:389  > INFO: Plateno=NY01504<<>>Camera_sn=55555555-55555555<<>>Maxpark_camera_id=1005
+2018-11-13 23:52:41,129 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:41,129 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2e
+2018-11-13 23:52:42,144 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 53, 78, 89, 48, 49, 53, 48, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 43, 3, 13]
+2018-11-13 23:52:42,145 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:42] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:42,276 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:42,277 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:42,277 root:push_plate_no:389  > INFO: Plateno=48888ZX<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:52:42,277 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:42,277 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x3b
+2018-11-13 23:52:43,291 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 52, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 62, 3, 13]
+2018-11-13 23:52:43,292 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:43] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:43,513 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:43,513 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:43,513 root:push_plate_no:389  > INFO: Plateno=48888ZX<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:52:43,514 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:43,514 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x3a
+2018-11-13 23:52:44,027 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 52, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 63, 3, 13]
+2018-11-13 23:52:44,027 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:44] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:44,112 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:44,113 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:44,113 root:push_plate_no:389  > INFO: Plateno=WHN26XA<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:52:44,113 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:44,113 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x60
+2018-11-13 23:52:45,138 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 87, 72, 78, 50, 54, 88, 65, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 101, 3, 13]
+2018-11-13 23:52:45,138 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:45] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:45,181 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:45,182 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:45,182 root:push_plate_no:389  > INFO: Plateno=NY01U67<<>>Camera_sn=33333333-33333333<<>>Maxpark_camera_id=1003
+2018-11-13 23:52:45,182 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:45,182 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x6d
+2018-11-13 23:52:46,200 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 51, 78, 89, 48, 49, 85, 54, 55, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 104, 3, 13]
+2018-11-13 23:52:46,200 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:46] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:46,282 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:46,282 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:46,283 root:push_plate_no:389  > INFO: Plateno=B595184<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:52:46,283 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:46,284 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x6b
+2018-11-13 23:52:47,310 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 66, 53, 57, 53, 49, 56, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 110, 3, 13]
+2018-11-13 23:52:47,310 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:47] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:47,359 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:47,359 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:47,360 root:push_plate_no:389  > INFO: Plateno=WHN26XA<<>>Camera_sn=55555555-55555555<<>>Maxpark_camera_id=1005
+2018-11-13 23:52:47,360 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:47,360 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x65
+2018-11-13 23:52:48,389 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 53, 87, 72, 78, 50, 54, 88, 65, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 96, 3, 13]
+2018-11-13 23:52:48,390 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:48] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:48,500 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:48,501 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:48,501 root:push_plate_no:389  > INFO: Plateno=NY01411<<>>Camera_sn=33333333-33333333<<>>Maxpark_camera_id=1003
+2018-11-13 23:52:48,501 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:48,501 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2d
+2018-11-13 23:52:49,023 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 51, 78, 89, 48, 49, 52, 49, 49, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 40, 3, 13]
+2018-11-13 23:52:49,023 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:49] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:49,075 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:49,075 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:49,075 root:push_plate_no:389  > INFO: Plateno=WHN26XA<<>>Camera_sn=22222222-22222222<<>>Maxpark_camera_id=1002
+2018-11-13 23:52:49,075 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:49,076 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x62
+2018-11-13 23:52:50,093 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 50, 87, 72, 78, 50, 54, 88, 65, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 103, 3, 13]
+2018-11-13 23:52:50,094 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:50] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:50,161 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:50,161 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:50,161 root:push_plate_no:389  > INFO: Plateno=NY01305<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:52:50,162 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:50,162 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2d
+2018-11-13 23:52:51,178 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 78, 89, 48, 49, 51, 48, 53, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 40, 3, 13]
+2018-11-13 23:52:51,179 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:51] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:51,371 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:51,372 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:51,373 root:push_plate_no:389  > INFO: Plateno=NY01305<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:52:51,373 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:51,374 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2c
+2018-11-13 23:52:52,409 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 51, 48, 53, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 41, 3, 13]
+2018-11-13 23:52:52,410 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:52] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:52,528 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:52,529 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:52,529 root:push_plate_no:389  > INFO: Plateno=NV01502<<>>Camera_sn=44444444-44444444<<>>Maxpark_camera_id=1004
+2018-11-13 23:52:52,530 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:52,531 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x26
+2018-11-13 23:52:53,045 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 52, 78, 86, 48, 49, 53, 48, 50, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 35, 3, 13]
+2018-11-13 23:52:53,045 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:53] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:53,092 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:53,093 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:53,093 root:push_plate_no:389  > INFO: Plateno=XL01036<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:52:53,093 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:53,093 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2c
+2018-11-13 23:52:54,108 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 88, 76, 48, 49, 48, 51, 54, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 41, 3, 13]
+2018-11-13 23:52:54,109 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:54] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:54,168 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:54,169 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:54,169 root:push_plate_no:389  > INFO: Plateno=BM95184<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:52:54,169 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:54,169 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x32
+2018-11-13 23:52:55,189 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 66, 77, 57, 53, 49, 56, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 55, 3, 13]
+2018-11-13 23:52:55,190 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:55] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:55,206 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 361, in push_plate_no
+    picture_name = lpr_ftp_folder + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
+UnboundLocalError: local variable 'maxpark_cam_id' referenced before assignment
+2018-11-13 23:52:55,207 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:55] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 23:52:55,525 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:55,526 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:55,526 root:push_plate_no:389  > INFO: Plateno=XL02003<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:52:55,526 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:55,527 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x29
+2018-11-13 23:52:56,050 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 88, 76, 48, 50, 48, 48, 51, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 44, 3, 13]
+2018-11-13 23:52:56,050 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:56] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:56,138 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:56,138 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:56,139 root:push_plate_no:389  > INFO: Plateno=109J450<<>>Camera_sn=66666666-66666666<<>>Maxpark_camera_id=1006
+2018-11-13 23:52:56,139 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:56,139 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x69
+2018-11-13 23:52:57,159 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 54, 49, 48, 57, 74, 52, 53, 48, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 108, 3, 13]
+2018-11-13 23:52:57,160 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:57] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:57,218 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:57,218 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:57,218 root:push_plate_no:389  > INFO: Plateno=H8888ZX<<>>Camera_sn=33333333-33333333<<>>Maxpark_camera_id=1003
+2018-11-13 23:52:57,218 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:57,219 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x65
+2018-11-13 23:52:58,231 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 51, 72, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 96, 3, 13]
+2018-11-13 23:52:58,232 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:58] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:58,351 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:58,351 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:58,352 root:push_plate_no:389  > INFO: Plateno=NY01148<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:52:58,352 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:58,352 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x27
+2018-11-13 23:52:59,365 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 49, 52, 56, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 34, 3, 13]
+2018-11-13 23:52:59,366 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:52:59] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:52:59,577 root:push_plate_no:387  > INFO: 
+2018-11-13 23:52:59,577 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:52:59,577 root:push_plate_no:389  > INFO: Plateno=48888ZX<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:52:59,577 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:52:59,577 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x3a
+2018-11-13 23:53:00,091 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 52, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 63, 3, 13]
+2018-11-13 23:53:00,092 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:00] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:00,097 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 361, in push_plate_no
+    picture_name = lpr_ftp_folder + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
+UnboundLocalError: local variable 'maxpark_cam_id' referenced before assignment
+2018-11-13 23:53:00,098 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:00] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 23:53:00,141 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:00,141 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:00,142 root:push_plate_no:389  > INFO: Plateno=NY01305<<>>Camera_sn=55555555-55555555<<>>Maxpark_camera_id=1005
+2018-11-13 23:53:00,142 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:00,142 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x29
+2018-11-13 23:53:01,155 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 53, 78, 89, 48, 49, 51, 48, 53, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 44, 3, 13]
+2018-11-13 23:53:01,156 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:01] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:01,207 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:01,208 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:01,208 root:push_plate_no:389  > INFO: Plateno=48888ZX<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:53:01,208 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:01,208 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x3b
+2018-11-13 23:53:02,221 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 52, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 62, 3, 13]
+2018-11-13 23:53:02,222 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:02] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:02,270 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:02,270 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:02,270 root:push_plate_no:389  > INFO: Plateno=NY01316<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:02,270 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:02,270 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2e
+2018-11-13 23:53:03,283 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 51, 49, 54, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 43, 3, 13]
+2018-11-13 23:53:03,284 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:03] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:03,485 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:03,485 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:03,486 root:push_plate_no:389  > INFO: Plateno=NV01502<<>>Camera_sn=77777777-77777777<<>>Maxpark_camera_id=1007
+2018-11-13 23:53:03,486 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:03,486 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x25
+2018-11-13 23:53:04,538 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 55, 78, 86, 48, 49, 53, 48, 50, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 32, 3, 13]
+2018-11-13 23:53:04,539 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:04] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:04,660 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:04,660 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:04,660 root:push_plate_no:389  > INFO: Plateno=NY01416<<>>Camera_sn=33333333-33333333<<>>Maxpark_camera_id=1003
+2018-11-13 23:53:04,661 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:04,661 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2a
+2018-11-13 23:53:05,214 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 51, 78, 89, 48, 49, 52, 49, 54, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 47, 3, 13]
+2018-11-13 23:53:05,215 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:05] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:05,585 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:05,586 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:05,586 root:push_plate_no:389  > INFO: Plateno=XL02023<<>>Camera_sn=22222222-22222222<<>>Maxpark_camera_id=1002
+2018-11-13 23:53:05,586 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:05,586 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x29
+2018-11-13 23:53:06,104 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 50, 88, 76, 48, 50, 48, 50, 51, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 44, 3, 13]
+2018-11-13 23:53:06,105 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:06] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:06,201 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:06,201 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:06,201 root:push_plate_no:389  > INFO: Plateno=NY01504<<>>Camera_sn=44444444-44444444<<>>Maxpark_camera_id=1004
+2018-11-13 23:53:06,201 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:06,201 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2f
+2018-11-13 23:53:07,236 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 52, 78, 89, 48, 49, 53, 48, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 42, 3, 13]
+2018-11-13 23:53:07,237 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:07] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:07,248 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 361, in push_plate_no
+    picture_name = lpr_ftp_folder + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
+UnboundLocalError: local variable 'maxpark_cam_id' referenced before assignment
+2018-11-13 23:53:07,249 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:07] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 23:53:07,340 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:07,340 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:07,341 root:push_plate_no:389  > INFO: Plateno=48888ZX<<>>Camera_sn=55555555-55555555<<>>Maxpark_camera_id=1005
+2018-11-13 23:53:07,341 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:07,341 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x3f
+2018-11-13 23:53:08,355 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 53, 52, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 58, 3, 13]
+2018-11-13 23:53:08,356 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:08] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:08,446 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:08,446 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:08,446 root:push_plate_no:389  > INFO: Plateno=XL01036<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:53:08,447 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:08,447 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2d
+2018-11-13 23:53:09,473 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 88, 76, 48, 49, 48, 51, 54, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 40, 3, 13]
+2018-11-13 23:53:09,474 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:09] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:09,591 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:09,591 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:09,591 root:push_plate_no:389  > INFO: Plateno=NY01416<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:09,591 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:09,591 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x29
+2018-11-13 23:53:10,104 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 52, 49, 54, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 44, 3, 13]
+2018-11-13 23:53:10,105 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:10] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:10,222 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:10,222 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:10,222 root:push_plate_no:389  > INFO: Plateno=XL01036<<>>Camera_sn=22222222-22222222<<>>Maxpark_camera_id=1002
+2018-11-13 23:53:10,223 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:10,223 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2e
+2018-11-13 23:53:11,236 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 50, 88, 76, 48, 49, 48, 51, 54, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 43, 3, 13]
+2018-11-13 23:53:11,237 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:11] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:11,283 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:11,284 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:11,284 root:push_plate_no:389  > INFO: Plateno=NY01504<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:11,284 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:11,284 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2b
+2018-11-13 23:53:12,306 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 53, 48, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 46, 3, 13]
+2018-11-13 23:53:12,307 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:12] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:12,315 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 361, in push_plate_no
+    picture_name = lpr_ftp_folder + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
+UnboundLocalError: local variable 'maxpark_cam_id' referenced before assignment
+2018-11-13 23:53:12,316 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:12] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 23:53:12,398 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:12,398 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:12,398 root:push_plate_no:389  > INFO: Plateno=FY01019<<>>Camera_sn=44444444-44444444<<>>Maxpark_camera_id=1004
+2018-11-13 23:53:12,398 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:12,398 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2e
+2018-11-13 23:53:13,413 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 52, 70, 89, 48, 49, 48, 49, 57, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 43, 3, 13]
+2018-11-13 23:53:13,414 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:13] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:13,596 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:13,596 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:13,596 root:push_plate_no:389  > INFO: Plateno=FY01019<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:13,596 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:13,597 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2a
+2018-11-13 23:53:14,115 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 70, 89, 48, 49, 48, 49, 57, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 47, 3, 13]
+2018-11-13 23:53:14,116 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:14] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:14,176 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:14,176 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:14,176 root:push_plate_no:389  > INFO: Plateno=XL02003<<>>Camera_sn=55555555-55555555<<>>Maxpark_camera_id=1005
+2018-11-13 23:53:14,176 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:14,176 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2c
+2018-11-13 23:53:15,203 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 53, 88, 76, 48, 50, 48, 48, 51, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 41, 3, 13]
+2018-11-13 23:53:15,204 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:15] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:15,260 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:15,260 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:15,260 root:push_plate_no:389  > INFO: Plateno=XL02023<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:53:15,260 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:15,261 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2a
+2018-11-13 23:53:16,296 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 88, 76, 48, 50, 48, 50, 51, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 47, 3, 13]
+2018-11-13 23:53:16,297 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:16] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:16,426 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:16,426 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:16,427 root:push_plate_no:389  > INFO: Plateno=FY01019<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:16,427 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:16,427 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2a
+2018-11-13 23:53:17,458 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 70, 89, 48, 49, 48, 49, 57, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 47, 3, 13]
+2018-11-13 23:53:17,459 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:17] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:17,500 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:17,501 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:17,501 root:push_plate_no:389  > INFO: Plateno=AH7W921<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:17,501 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:17,501 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x7f
+2018-11-13 23:53:18,050 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 65, 72, 55, 87, 57, 50, 49, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 122, 3, 13]
+2018-11-13 23:53:18,051 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:18] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:18,198 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:18,199 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:18,199 root:push_plate_no:389  > INFO: Plateno=WHN26XA<<>>Camera_sn=33333333-33333333<<>>Maxpark_camera_id=1003
+2018-11-13 23:53:18,199 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:18,199 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x63
+2018-11-13 23:53:19,225 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 51, 87, 72, 78, 50, 54, 88, 65, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 102, 3, 13]
+2018-11-13 23:53:19,225 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:19] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:19,271 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:19,271 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:19,272 root:push_plate_no:389  > INFO: Plateno=BD95184<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:53:19,272 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:19,272 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x3a
+2018-11-13 23:53:20,302 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 66, 68, 57, 53, 49, 56, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 63, 3, 13]
+2018-11-13 23:53:20,303 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:20] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:20,364 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:20,364 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:20,364 root:push_plate_no:389  > INFO: Plateno=NY01115<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:20,364 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:20,364 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2f
+2018-11-13 23:53:21,385 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 49, 49, 53, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 42, 3, 13]
+2018-11-13 23:53:21,385 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:21] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:21,390 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 361, in push_plate_no
+    picture_name = lpr_ftp_folder + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
+UnboundLocalError: local variable 'maxpark_cam_id' referenced before assignment
+2018-11-13 23:53:21,392 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:21] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 23:53:21,484 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:21,484 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:21,484 root:push_plate_no:389  > INFO: Plateno=XL02026<<>>Camera_sn=22222222-22222222<<>>Maxpark_camera_id=1002
+2018-11-13 23:53:21,484 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:21,485 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2c
+2018-11-13 23:53:22,499 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 50, 88, 76, 48, 50, 48, 50, 54, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 41, 3, 13]
+2018-11-13 23:53:22,499 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:22] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:22,645 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:22,646 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:22,647 root:push_plate_no:389  > INFO: Plateno=NY01412<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:22,647 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:22,648 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2d
+2018-11-13 23:53:23,171 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 52, 49, 50, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 40, 3, 13]
+2018-11-13 23:53:23,171 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:23] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:23,253 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:23,253 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:23,254 root:push_plate_no:389  > INFO: Plateno=NY01067<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:53:23,254 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:23,254 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2a
+2018-11-13 23:53:24,271 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 78, 89, 48, 49, 48, 54, 55, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 47, 3, 13]
+2018-11-13 23:53:24,271 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:24] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:24,317 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:24,317 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:24,317 root:push_plate_no:389  > INFO: Plateno=NY01504<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:24,318 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:24,318 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2b
+2018-11-13 23:53:25,335 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 53, 48, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 46, 3, 13]
+2018-11-13 23:53:25,336 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:25] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:25,469 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:25,469 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:25,470 root:push_plate_no:389  > INFO: Plateno=AH7W921<<>>Camera_sn=77777777-77777777<<>>Maxpark_camera_id=1007
+2018-11-13 23:53:25,470 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:25,470 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x78
+2018-11-13 23:53:26,488 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 55, 65, 72, 55, 87, 57, 50, 49, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 125, 3, 13]
+2018-11-13 23:53:26,489 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:26] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:26,645 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:26,646 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:26,647 root:push_plate_no:389  > INFO: Plateno=XL02003<<>>Camera_sn=33333333-33333333<<>>Maxpark_camera_id=1003
+2018-11-13 23:53:26,648 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:26,649 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2a
+2018-11-13 23:53:27,167 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 51, 88, 76, 48, 50, 48, 48, 51, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 47, 3, 13]
+2018-11-13 23:53:27,168 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:27] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:27,253 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:27,253 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:27,253 root:push_plate_no:389  > INFO: Plateno=NY01502<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:27,253 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:27,254 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2d
+2018-11-13 23:53:28,277 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 53, 48, 50, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 40, 3, 13]
+2018-11-13 23:53:28,278 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:28] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:28,342 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:28,342 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:28,342 root:push_plate_no:389  > INFO: Plateno=NY01316<<>>Camera_sn=66666666-66666666<<>>Maxpark_camera_id=1006
+2018-11-13 23:53:28,343 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:28,343 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x28
+2018-11-13 23:53:29,359 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 54, 78, 89, 48, 49, 51, 49, 54, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 45, 3, 13]
+2018-11-13 23:53:29,360 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:29] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:29,415 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:29,415 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:29,415 root:push_plate_no:389  > INFO: Plateno=NY01065<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:29,415 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:29,415 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x29
+2018-11-13 23:53:30,436 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 48, 54, 53, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 44, 3, 13]
+2018-11-13 23:53:30,437 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:30] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:30,443 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 361, in push_plate_no
+    picture_name = lpr_ftp_folder + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
+UnboundLocalError: local variable 'maxpark_cam_id' referenced before assignment
+2018-11-13 23:53:30,445 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:30] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 23:53:30,492 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:30,492 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:30,492 root:push_plate_no:389  > INFO: Plateno=H8888ZX<<>>Camera_sn=44444444-44444444<<>>Maxpark_camera_id=1004
+2018-11-13 23:53:30,492 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:30,493 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x62
+2018-11-13 23:53:31,020 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 52, 72, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 103, 3, 13]
+2018-11-13 23:53:31,021 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:31] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:31,134 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:31,135 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:31,135 root:push_plate_no:389  > INFO: Plateno=BM95184<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:31,135 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:31,135 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x32
+2018-11-13 23:53:32,164 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 66, 77, 57, 53, 49, 56, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 55, 3, 13]
+2018-11-13 23:53:32,165 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:32] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:32,321 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:32,321 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:32,321 root:push_plate_no:389  > INFO: Plateno=NY01016<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:32,321 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:32,321 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2d
+2018-11-13 23:53:33,341 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 48, 49, 54, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 40, 3, 13]
+2018-11-13 23:53:33,342 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:33] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:33,417 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:33,417 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:33,417 root:push_plate_no:389  > INFO: Plateno=U8888ZX<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:53:33,418 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:33,418 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x7a
+2018-11-13 23:53:34,432 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 85, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 127, 3, 13]
+2018-11-13 23:53:34,433 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:34] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:34,553 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:34,553 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:34,554 root:push_plate_no:389  > INFO: Plateno=NY01502<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:34,554 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:34,554 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2d
+2018-11-13 23:53:35,074 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 53, 48, 50, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 40, 3, 13]
+2018-11-13 23:53:35,075 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:35] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:35,270 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:35,270 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:35,271 root:push_plate_no:389  > INFO: Plateno=WHN26XA<<>>Camera_sn=55555555-55555555<<>>Maxpark_camera_id=1005
+2018-11-13 23:53:35,271 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:35,271 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x65
+2018-11-13 23:53:36,296 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 53, 87, 72, 78, 50, 54, 88, 65, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 96, 3, 13]
+2018-11-13 23:53:36,296 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:36] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:36,450 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:36,450 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:36,450 root:push_plate_no:389  > INFO: Plateno=A8888ZA<<>>Camera_sn=22222222-22222222<<>>Maxpark_camera_id=1002
+2018-11-13 23:53:36,451 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:36,451 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x74
+2018-11-13 23:53:37,471 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 50, 65, 56, 56, 56, 56, 90, 65, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 113, 3, 13]
+2018-11-13 23:53:37,472 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:37] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:37,621 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:37,622 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:37,623 root:push_plate_no:389  > INFO: Plateno=NY01065<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:37,623 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:37,624 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x29
+2018-11-13 23:53:38,153 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 48, 54, 53, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 44, 3, 13]
+2018-11-13 23:53:38,154 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:38] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:38,211 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:38,212 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:38,212 root:push_plate_no:389  > INFO: Plateno=NY05055<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:38,212 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:38,213 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2e
+2018-11-13 23:53:39,227 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 53, 48, 53, 53, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 43, 3, 13]
+2018-11-13 23:53:39,227 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:39] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:39,299 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:39,299 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:39,299 root:push_plate_no:389  > INFO: Plateno=H8888ZX<<>>Camera_sn=77777777-77777777<<>>Maxpark_camera_id=1007
+2018-11-13 23:53:39,299 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:39,299 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x61
+2018-11-13 23:53:40,319 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 55, 72, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 100, 3, 13]
+2018-11-13 23:53:40,320 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:40] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:40,375 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:40,375 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:40,375 root:push_plate_no:389  > INFO: Plateno=NY01067<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:40,375 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:40,375 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2b
+2018-11-13 23:53:41,390 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 48, 54, 55, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 46, 3, 13]
+2018-11-13 23:53:41,391 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:41] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:41,429 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:41,430 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:41,430 root:push_plate_no:389  > INFO: Plateno=U8888ZX<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:41,430 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:41,430 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x7b
+2018-11-13 23:53:42,447 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 85, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 126, 3, 13]
+2018-11-13 23:53:42,448 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:42] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:42,500 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:42,500 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:42,500 root:push_plate_no:389  > INFO: Plateno=H8888ZX<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:53:42,500 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:42,501 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x67
+2018-11-13 23:53:43,019 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 72, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 98, 3, 13]
+2018-11-13 23:53:43,020 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:43] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:43,065 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:43,065 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:43,065 root:push_plate_no:389  > INFO: Plateno=BD95184<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:43,065 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:43,066 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x3b
+2018-11-13 23:53:44,102 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 66, 68, 57, 53, 49, 56, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 62, 3, 13]
+2018-11-13 23:53:44,102 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:44] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:44,106 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 361, in push_plate_no
+    picture_name = lpr_ftp_folder + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
+UnboundLocalError: local variable 'maxpark_cam_id' referenced before assignment
+2018-11-13 23:53:44,107 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:44] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 23:53:44,169 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:44,169 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:44,169 root:push_plate_no:389  > INFO: Plateno=NY01305<<>>Camera_sn=44444444-44444444<<>>Maxpark_camera_id=1004
+2018-11-13 23:53:44,169 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:44,169 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x28
+2018-11-13 23:53:45,186 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 52, 78, 89, 48, 49, 51, 48, 53, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 45, 3, 13]
+2018-11-13 23:53:45,186 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:45] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:45,275 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:45,275 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:45,275 root:push_plate_no:389  > INFO: Plateno=NY05055<<>>Camera_sn=33333333-33333333<<>>Maxpark_camera_id=1003
+2018-11-13 23:53:45,275 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:45,276 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2d
+2018-11-13 23:53:46,297 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 51, 78, 89, 48, 53, 48, 53, 53, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 40, 3, 13]
+2018-11-13 23:53:46,298 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:46] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:46,350 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:46,350 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:46,350 root:push_plate_no:389  > INFO: Plateno=XL02023<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:53:46,350 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:46,351 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2a
+2018-11-13 23:53:47,371 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 88, 76, 48, 50, 48, 50, 51, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 47, 3, 13]
+2018-11-13 23:53:47,371 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:47] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:47,416 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:47,416 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:47,416 root:push_plate_no:389  > INFO: Plateno=48888ZX<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:47,416 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:47,417 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x3a
+2018-11-13 23:53:48,438 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 52, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 63, 3, 13]
+2018-11-13 23:53:48,439 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:48] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:48,508 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:48,508 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:48,508 root:push_plate_no:389  > INFO: Plateno=109J450<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:48,509 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:48,509 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x6f
+2018-11-13 23:53:49,033 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 49, 48, 57, 74, 52, 53, 48, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 106, 3, 13]
+2018-11-13 23:53:49,034 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:49] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:49,094 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:49,094 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:49,095 root:push_plate_no:389  > INFO: Plateno=AH7W921<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:53:49,095 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:49,095 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x7e
+2018-11-13 23:53:50,112 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 65, 72, 55, 87, 57, 50, 49, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 123, 3, 13]
+2018-11-13 23:53:50,112 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:50] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:50,150 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:50,151 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:50,151 root:push_plate_no:389  > INFO: Plateno=NY01118<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:50,151 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:50,151 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x22
+2018-11-13 23:53:51,175 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 49, 49, 56, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 39, 3, 13]
+2018-11-13 23:53:51,176 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:51] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:51,270 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:51,270 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:51,270 root:push_plate_no:389  > INFO: Plateno=XL02003<<>>Camera_sn=66666666-66666666<<>>Maxpark_camera_id=1006
+2018-11-13 23:53:51,271 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:51,271 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2f
+2018-11-13 23:53:52,287 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 54, 88, 76, 48, 50, 48, 48, 51, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 42, 3, 13]
+2018-11-13 23:53:52,287 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:52] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:52,339 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:52,339 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:52,339 root:push_plate_no:389  > INFO: Plateno=NY01504<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:52,340 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:52,340 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2b
+2018-11-13 23:53:53,364 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 78, 89, 48, 49, 53, 48, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 46, 3, 13]
+2018-11-13 23:53:53,365 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:53] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:53,414 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:53,414 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:53,414 root:push_plate_no:389  > INFO: Plateno=NY01148<<>>Camera_sn=77777777-77777777<<>>Maxpark_camera_id=1007
+2018-11-13 23:53:53,415 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:53,415 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x20
+2018-11-13 23:53:54,438 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 55, 78, 89, 48, 49, 49, 52, 56, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 37, 3, 13]
+2018-11-13 23:53:54,439 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:54] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:54,478 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:54,478 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:54,478 root:push_plate_no:389  > INFO: Plateno=BM95184<<>>Camera_sn=33333333-33333333<<>>Maxpark_camera_id=1003
+2018-11-13 23:53:54,478 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:54,479 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x31
+2018-11-13 23:53:55,498 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 51, 66, 77, 57, 53, 49, 56, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 52, 3, 13]
+2018-11-13 23:53:55,498 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:55] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:55,556 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:55,556 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:55,556 root:push_plate_no:389  > INFO: Plateno=NY01411<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:53:55,556 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:55,557 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2f
+2018-11-13 23:53:56,071 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 78, 89, 48, 49, 52, 49, 49, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 42, 3, 13]
+2018-11-13 23:53:56,072 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:56] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:56,132 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:56,132 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:56,132 root:push_plate_no:389  > INFO: Plateno=U8888ZX<<>>Camera_sn=55555555-55555555<<>>Maxpark_camera_id=1005
+2018-11-13 23:53:56,133 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:56,133 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x7e
+2018-11-13 23:53:57,164 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 53, 85, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 123, 3, 13]
+2018-11-13 23:53:57,165 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:57] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:57,214 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:57,214 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:57,215 root:push_plate_no:389  > INFO: Plateno=NY01305<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:53:57,215 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:57,215 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2d
+2018-11-13 23:53:58,245 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 78, 89, 48, 49, 51, 48, 53, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 40, 3, 13]
+2018-11-13 23:53:58,245 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:58] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:58,307 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:58,307 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:58,308 root:push_plate_no:389  > INFO: Plateno=BD95184<<>>Camera_sn=22222222-22222222<<>>Maxpark_camera_id=1002
+2018-11-13 23:53:58,308 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:58,308 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x39
+2018-11-13 23:53:59,337 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 50, 66, 68, 57, 53, 49, 56, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 60, 3, 13]
+2018-11-13 23:53:59,338 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:53:59] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:53:59,407 root:push_plate_no:387  > INFO: 
+2018-11-13 23:53:59,408 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:53:59,408 root:push_plate_no:389  > INFO: Plateno=U8888ZX<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:53:59,408 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:53:59,408 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x7b
+2018-11-13 23:54:00,477 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 85, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 126, 3, 13]
+2018-11-13 23:54:00,478 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:54:00] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:54:00,598 root:push_plate_no:387  > INFO: 
+2018-11-13 23:54:00,598 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:54:00,598 root:push_plate_no:389  > INFO: Plateno=NY01504<<>>Camera_sn=33333333-33333333<<>>Maxpark_camera_id=1003
+2018-11-13 23:54:00,599 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:54:00,599 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x28
+2018-11-13 23:54:01,159 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 51, 78, 89, 48, 49, 53, 48, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 45, 3, 13]
+2018-11-13 23:54:01,160 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:54:01] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:54:01,233 root:push_plate_no:387  > INFO: 
+2018-11-13 23:54:01,234 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:54:01,234 root:push_plate_no:389  > INFO: Plateno=WHN26XA<<>>Camera_sn=22222222-22222222<<>>Maxpark_camera_id=1002
+2018-11-13 23:54:01,234 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:54:01,234 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x62
+2018-11-13 23:54:02,259 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 50, 87, 72, 78, 50, 54, 88, 65, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 103, 3, 13]
+2018-11-13 23:54:02,260 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:54:02] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:54:02,264 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 361, in push_plate_no
+    picture_name = lpr_ftp_folder + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
+UnboundLocalError: local variable 'maxpark_cam_id' referenced before assignment
+2018-11-13 23:54:02,265 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:54:02] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 23:54:02,324 root:push_plate_no:387  > INFO: 
+2018-11-13 23:54:02,325 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:54:02,325 root:push_plate_no:389  > INFO: Plateno=BM95184<<>>Camera_sn=66666666-66666666<<>>Maxpark_camera_id=1006
+2018-11-13 23:54:02,325 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:54:02,325 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x34
+2018-11-13 23:54:03,343 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 54, 66, 77, 57, 53, 49, 56, 52, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 49, 3, 13]
+2018-11-13 23:54:03,344 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:54:03] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:54:03,466 root:push_plate_no:387  > INFO: 
+2018-11-13 23:54:03,466 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:54:03,466 root:push_plate_no:389  > INFO: Plateno=109J450<<>>Camera_sn=44444444-44444444<<>>Maxpark_camera_id=1004
+2018-11-13 23:54:03,467 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:54:03,467 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x6b
+2018-11-13 23:54:04,493 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 52, 49, 48, 57, 74, 52, 53, 48, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 110, 3, 13]
+2018-11-13 23:54:04,493 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:54:04] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:54:04,559 root:push_plate_no:387  > INFO: 
+2018-11-13 23:54:04,559 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:54:04,559 root:push_plate_no:389  > INFO: Plateno=H8888ZX<<>>Camera_sn=11111111-11111111<<>>Maxpark_camera_id=1001
+2018-11-13 23:54:04,560 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:54:04,560 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x67
+2018-11-13 23:54:05,081 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 49, 72, 56, 56, 56, 56, 90, 88, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 98, 3, 13]
+2018-11-13 23:54:05,082 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:54:05] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:54:05,143 root:push_plate_no:387  > INFO: 
+2018-11-13 23:54:05,143 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:54:05,144 root:push_plate_no:389  > INFO: Plateno=XL02023<<>>Camera_sn=00000000-00000000<<>>Maxpark_camera_id=1000
+2018-11-13 23:54:05,144 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:54:05,144 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2b
+2018-11-13 23:54:06,183 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 48, 88, 76, 48, 50, 48, 50, 51, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 46, 3, 13]
+2018-11-13 23:54:06,183 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:54:06] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:54:06,233 root:push_plate_no:387  > INFO: 
+2018-11-13 23:54:06,233 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:54:06,233 root:push_plate_no:389  > INFO: Plateno=NY01016<<>>Camera_sn=77777777-77777777<<>>Maxpark_camera_id=1007
+2018-11-13 23:54:06,234 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:54:06,234 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x2a
+2018-11-13 23:54:07,266 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 55, 78, 89, 48, 49, 48, 49, 54, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 47, 3, 13]
+2018-11-13 23:54:07,267 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:54:07] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -
+2018-11-13 23:54:07,277 flask.app:log_exception:1761 > ERROR: Exception on /localagent/v1/push_plate_no [POST]
+Traceback (most recent call last):
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Abdul Hadi\PycharmProjects\LPRLA\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Abdul Hadi/PycharmProjects/LPRLA/lpr_localagent.py", line 361, in push_plate_no
+    picture_name = lpr_ftp_folder + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
+UnboundLocalError: local variable 'maxpark_cam_id' referenced before assignment
+2018-11-13 23:54:07,279 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:54:07] "POST /localagent/v1/push_plate_no HTTP/1.1" 500 -
+2018-11-13 23:54:07,559 root:push_plate_no:387  > INFO: 
+2018-11-13 23:54:07,560 root:push_plate_no:388  > INFO: --- v1_push plate no ---
+2018-11-13 23:54:07,560 root:push_plate_no:389  > INFO: Plateno=NY01309<<>>Camera_sn=22222222-22222222<<>>Maxpark_camera_id=1002
+2018-11-13 23:54:07,561 root:push_plate_no:391  > INFO: Communicating with Comms Module
+2018-11-13 23:54:07,561 LA_Commons:calculate_checksum:43   > INFO: Checksum (numerical= 0x22
+2018-11-13 23:54:08,088 root:push_plate_no:398  > INFO: response : [2, 71, 49, 48, 48, 50, 78, 89, 48, 49, 51, 48, 57, 48, 48, 57, 107, 105, 112, 108, 101, 80, 69, 82, 79, 82, 68, 48, 49, 50, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 39, 3, 13]
+2018-11-13 23:54:08,089 werkzeug:_log:88   > INFO: 127.0.0.1 - - [13/Nov/2018 23:54:08] "POST /localagent/v1/push_plate_no HTTP/1.1" 200 -

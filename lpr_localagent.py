@@ -18,8 +18,12 @@ import IDLE_Msg
 import ERROR_Code
 import GET_Req
 import PUSH_plate_no
+import COMM_LISTENER
+import kp_catch_trx
+import lpr_push_display
 import base64
 import time
+import ftplib
 from ftplib import FTP
 
 
@@ -87,6 +91,15 @@ lpr_ftp_pswd = config['LPR_MODULE']['lpr_ftp_pswd']
 lpr_ftp_folder = config['LPR_MODULE']['lpr_ftp_folder']
 LPR_CommModule_IP = config['LPR_MODULE']['LPR_CommModule_IP']
 LPR_CommModule_Port = int(config['LPR_MODULE']['LPR_CommModule_Port'])
+LPR_CommModule_IP_Receive = config['LPR_MODULE']['LPR_CommModule_IP_Receive']
+LPR_CommModule_Port_Receive = int(config['LPR_MODULE']['LPR_CommModule_Port_Receive'])
+lpr_server_url = config['LPR_MODULE']['lpr_server_url']
+txtSN = config['LPR_MODULE']['lpr_led_text_SN']
+txtSX = config['LPR_MODULE']['lpr_led_text_SX']
+txtSA = config['LPR_MODULE']['lpr_led_text_SA']
+txtSE = config['LPR_MODULE']['lpr_led_text_SE']
+txtSB = config['LPR_MODULE']['lpr_led_text_SB']
+txtTK = config['LPR_MODULE']['lpr_led_text_TK']
 
 
 # Detect OS in order to detect LAN IP of localhost automatically
@@ -196,9 +209,12 @@ def main():
     g_PNSAppServices_IPWhiteList = list(map(str.strip, g_PNSAppServices_IPWhiteList))
     logger.info("PNS App Services IP Address White List:")
     logger.info(g_PNSAppServices_IPWhiteList)
+    # response = COMM_LISTENER.COMM_LISTENER(LPR_CommModule_IP_Receive,
+    #                                        LPR_CommModule_Port_Receive,
+    #                                        SOCKET_TIMEOUT,
+    #                                        SEND_BUFFER_SIZE,
+    #                                        RECV_BUFFER_SIZE)
 
-    if (ENABLE_PERIODIC_IDLE_MSG > 0): # IDLE is enabled
-        run_Idle_task_periodically()  # Since flask is an infinite loop, start Timer loop here.
 
     if int(config['LocalAgent']['Http']):
         # Auto configure LAN IP and start Flask as HTTP
@@ -211,6 +227,7 @@ def main():
                    os.path.join(actual__file__dir, config['Certs']['Key']))
         app.run(host=get_lan_ip(), port=int(config['LocalAgent']['Port']), debug=False,
                 ssl_context=context)
+
 
     return
 
@@ -304,22 +321,29 @@ def v1_get_ticket():
 @app.route('/localagent/v1/push_plate_no', methods=['POST'])
 def push_plate_no():
 
-    # print(request.data)
+    print(request.data)
     plate_no = request.json['body']["result"]["PlateResult"]["license"]
+    #remove white space from plate number
+    plate_no=plate_no.replace(" ", "")
     camera_id = request.json['body']["vzid"]["sn"]
     base64img = request.json['body']["result"]["PlateResult"]["imageFile"]
 
-    datenow=time.strftime("%Y%m%d%H%M")
+    datenow=time.strftime("%Y%m%d")
 
     cam_mapping = json.loads(camera_mapping_conf)
 
     total_cam=len(cam_mapping['camera_mapping'])
+    global x
     for x in range(total_cam):
+
         # lpr_sn=cam_mapping['camera_mapping'][x]['lpr_sn']
         if(camera_id==cam_mapping['camera_mapping'][x]['lpr_sn']):
             maxpark_cam_id=cam_mapping['camera_mapping'][x]['maxpark_cam_id']
+            print("xxxxxx"+maxpark_cam_id)
+
 
     picture_name = lpr_ftp_folder + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
+    print(picture_name)
     # picture_name = datenow + maxpark_cam_id + plate_no + ".jpg"
 
     print("Plateno=" + plate_no + "<<>>Camera_sn=" + camera_id+"<<>>Maxpark_camera_id="+maxpark_cam_id)
@@ -337,14 +361,23 @@ def push_plate_no():
 
     # filename = 'exampleFile.txt'
     ftp = FTP(lpr_ftp_server)
-    ftp.login(user=lpr_ftp_user, passwd=lpr_ftp_pswd)
-    # ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
-    ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
-    ftp.quit()
+    try:
+        ftp.login(user=lpr_ftp_user, passwd=lpr_ftp_pswd)
+        # ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
+        ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
+        ftp.quit()
+        #remove temp file after upload to ftp success
+        try:
+            os.remove(filename)
+        except os.error as e:
+            logger.error("Failed to delete temp file %s" % e)
+
+    except ftplib.error_perm as e:
+        logger.error("Failed to connect to ftp server using given info host=%s , username=%s , password=%s ,folder=%s , %s" % (lpr_ftp_server,lpr_ftp_user,lpr_ftp_pswd,lpr_ftp_folder,e) )
 
 
 
-
+    # time.sleep(5)
     logger.info("")
     logger.info("--- v1_push plate no ---")
     logger.info("Plateno=" + plate_no + "<<>>Camera_sn=" + camera_id+"<<>>Maxpark_camera_id="+maxpark_cam_id)
@@ -355,26 +388,63 @@ def push_plate_no():
                                             SOCKET_TIMEOUT,
                                             SEND_BUFFER_SIZE,
                                             RECV_BUFFER_SIZE,
-                                            plate_no)
+                                            plate_no,maxpark_cam_id)
     logger.info("response : {0}".format(response))
 
-    logger.info("Send to PNS Server")
+    if(response == 'false'):
+        return_json = {
+            'err_code': 'LPR401',
+            'plate_no': plate_no,
+            'camera_sn': camera_id,
+            'maxpark_cam_id': maxpark_cam_id,
+            'filename': filename,
+            'ftp_server': lpr_ftp_server
+        }
+        returnHttpStatus = 400
+        return jsonify(return_json), returnHttpStatus
+    else:
+        # logger.info("Send to PNS Server")
 
-    return_json = {
-        'plate_no': plate_no,
-        'camera_sn': camera_id,
-        'maxpark_cam_id': maxpark_cam_id,
-        'filename': filename,
-        'ftp_server': lpr_ftp_server
+        if (response == 'SN'):
+            text2display = txtSN
+        if (response == 'SX'):
+            text2display = txtSX
+        if (response == 'SA'):
+            text2display = txtSA
+        if (response == 'SE'):
+            text2display = txtSE
+        if (response == 'SB'):
+            text2display = txtSB
+        if (response == 'TK'):
+            text2display = txtTK
+
+        text2display=text2display.replace("<plate_no>", plate_no)
+
+        data = base64.b64encode(text2display.encode())
+        data_utf = data.decode("utf-8")
 
 
-    }
+        #push to device operation
+        textdic = json.loads(text2display)
+        lpr_push_display.push_display(lpr_server_url, textdic)
 
-    returnHttpStatus = 200
+        #send data to kiplepark cloud
+        # kp_catch_trx.catch_trx(lpr_server_url,response)
 
-    return jsonify(return_json), returnHttpStatus
 
-
+        return_json =   {
+                            "operation": [
+                                {
+                                    "type": "open_gate"
+                                },
+                                {
+                                    "type": "led_display",
+                                    "msg": textdic
+                                }
+                            ]
+                        }
+        returnHttpStatus = 200
+        return jsonify(return_json), returnHttpStatus
 
 
 if __name__ == "__main__":
