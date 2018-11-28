@@ -405,6 +405,8 @@ def push_plate_no():
     else:
         # logger.info("Send to PNS Server")
 
+        service='TCS'
+
         if (response == 'SN'):
             text2display = txtSN
         if (response == 'SX'):
@@ -417,6 +419,7 @@ def push_plate_no():
             text2display = txtSB
         if (response == 'TK'):
             text2display = txtTK
+            service = 'TCN'
 
         text2display=text2display.replace("<plate_no>", plate_no)
 
@@ -429,7 +432,7 @@ def push_plate_no():
         lpr_push_display.push_display(lpr_server_url, textdic)
 
         #send data to kiplepark cloud
-        # kp_catch_trx.catch_trx(lpr_server_url,response)
+        kp_catch_trx.catch_trx('https://sandbox.kiplepark.com',response,service,plate_no,'SIG0030',camera_id)
 
 
         return_json =   {
