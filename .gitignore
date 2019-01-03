@@ -1,3 +1,15 @@
 
 logs/localagent.log
 logs/localagent.log
+venv
+__pycache__
+.idea
+__pycache__/kp_catch_trx.cpython-37.pyc
+__pycache__/lpr_localagent.cpython-37.pyc
+logs/localagent.log
+logs/localagent.log.2018-11-28
+logs/localagent.log.2018-12-03
+logs/localagent.log.2018-12-04
+vehicle_plate/20181203EN01WAB6789.jpg
+venv/pip-selfcheck.json
+vehicle_plate

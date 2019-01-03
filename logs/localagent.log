@@ -1,6 +1,0 @@
-2018-11-28 13:55:53,644 root:main:203  > CRITICAL: 
- --- Application started & 'main' was called. This is not really Critical. --- 
-
-2018-11-28 13:55:53,644 root:main:210  > INFO: PNS App Services IP Address White List:
-2018-11-28 13:55:53,644 root:main:211  > INFO: ['35.162.219.50', '52.77.93.214', '13.228.1.86', '54.169.137.81', '127.0.0.1']
-2018-11-28 13:55:55,208 werkzeug:_log:88   > INFO:  * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
