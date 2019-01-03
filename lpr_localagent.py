@@ -322,6 +322,7 @@ def v1_get_ticket():
 def push_plate_no():
 
     print(request.data)
+    push_id = request.json['id']
     plate_no = request.json['body']["result"]["PlateResult"]["license"]
     #remove white space from plate number
     plate_no=plate_no.replace(" ", "")
@@ -429,10 +430,10 @@ def push_plate_no():
 
         #push to device operation
         textdic = json.loads(text2display)
-        lpr_push_display.push_display(lpr_server_url, textdic)
+        lpr_push_display.push_display(lpr_server_url, textdic, push_id, camera_id)
 
         #send data to kiplepark cloud
-        kp_catch_trx.catch_trx('https://sandbox.kiplepark.com',response,service,plate_no,'SIG0030',camera_id)
+        # kp_catch_trx.catch_trx('https://sandbox.kiplepark.com',response,service,plate_no,'SIG0030',camera_id)
 
 
         return_json =   {
