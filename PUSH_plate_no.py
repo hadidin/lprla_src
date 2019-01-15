@@ -137,7 +137,10 @@ def push_plate_no(host, port, socket_timeout, send_buffer_size, recv_buffer_size
     else:
         s.close()
         logger.warning("Timeout. Close connection")
+        logger.warning("Failed to send packet to maxpark.make sure maxpark is listening to receie plate no ")
         RETURN_ERRCODE = ERROR_Code.errCommunicationTimeout
+
+        return ("false")
         # return (RETURN_ERRCODE, RETURN_ODATA, RETURN_TICKET, RETURN_ENTRY,
         #     RETURN_EXIT, RETURN_VALUE) # as a tuple
 
