@@ -4,4 +4,3 @@ __pycache__
 vehicle_plate
 logs
 conf/config.ini
-dist
