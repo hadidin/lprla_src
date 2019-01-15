@@ -361,20 +361,20 @@ def push_plate_no():
     print(filename)
 
     # filename = 'exampleFile.txt'
-    ftp = FTP(lpr_ftp_server)
-    try:
-        ftp.login(user=lpr_ftp_user, passwd=lpr_ftp_pswd)
-        # ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
-        ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
-        ftp.quit()
-        #remove temp file after upload to ftp success
-        try:
-            os.remove(filename)
-        except os.error as e:
-            logger.error("Failed to delete temp file %s" % e)
-
-    except ftplib.error_perm as e:
-        logger.error("Failed to connect to ftp server using given info host=%s , username=%s , password=%s ,folder=%s , %s" % (lpr_ftp_server,lpr_ftp_user,lpr_ftp_pswd,lpr_ftp_folder,e) )
+    # ftp = FTP(lpr_ftp_server)
+    # try:
+    #     ftp.login(user=lpr_ftp_user, passwd=lpr_ftp_pswd)
+    #     # ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
+    #     ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
+    #     ftp.quit()
+    #     #remove temp file after upload to ftp success
+    #     try:
+    #         os.remove(filename)
+    #     except os.error as e:
+    #         logger.error("Failed to delete temp file %s" % e)
+    #
+    # except ftplib.error_perm as e:
+    #     logger.error("Failed to connect to ftp server using given info host=%s , username=%s , password=%s ,folder=%s , %s" % (lpr_ftp_server,lpr_ftp_user,lpr_ftp_pswd,lpr_ftp_folder,e) )
 
 
 
