@@ -360,13 +360,15 @@ def push_plate_no():
     # session.quit()
     print(filename)
 
-    # filename = 'exampleFile.txt'
+    # upload picture to ftp folder
+    logger.info("===================Starting upload file to ftp folder==============")
     # ftp = FTP(lpr_ftp_server)
     # try:
     #     ftp.login(user=lpr_ftp_user, passwd=lpr_ftp_pswd)
     #     # ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
     #     ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
     #     ftp.quit()
+    #
     #     #remove temp file after upload to ftp success
     #     try:
     #         os.remove(filename)
@@ -376,6 +378,12 @@ def push_plate_no():
     # except ftplib.error_perm as e:
     #     logger.error("Failed to connect to ftp server using given info host=%s , username=%s , password=%s ,folder=%s , %s" % (lpr_ftp_server,lpr_ftp_user,lpr_ftp_pswd,lpr_ftp_folder,e) )
 
+    print(lpr_ftp_server + lpr_ftp_user + lpr_ftp_pswd)
+    session = ftplib.FTP(lpr_ftp_server, lpr_ftp_user, lpr_ftp_pswd)
+    file = open(filename, 'rb')  # file to send
+    session.storbinary('STOR ' + filename, file)  # send the file
+    file.close()  # close file and FTP
+    session.quit()
 
 
     # time.sleep(5)
