@@ -378,7 +378,7 @@ def push_plate_no():
     # except ftplib.error_perm as e:
     #     logger.error("Failed to connect to ftp server using given info host=%s , username=%s , password=%s ,folder=%s , %s" % (lpr_ftp_server,lpr_ftp_user,lpr_ftp_pswd,lpr_ftp_folder,e) )
 
-    print(lpr_ftp_server + lpr_ftp_user + lpr_ftp_pswd)
+    print("lpr_ftp_server=" + lpr_ftp_server + "<<>>lpr_ftp_user=" + lpr_ftp_user + "<<>>lpr_ftp_pswd=" + lpr_ftp_pswd)
     session = ftplib.FTP(lpr_ftp_server, lpr_ftp_user, lpr_ftp_pswd)
     file = open(filename, 'rb')  # file to send
     session.storbinary('STOR ' + filename, file)  # send the file
