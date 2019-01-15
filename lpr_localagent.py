@@ -321,7 +321,7 @@ def v1_get_ticket():
 @app.route('/localagent/v1/push_plate_no', methods=['POST'])
 def push_plate_no():
 
-    print(request.data)
+    # print(request.data)
     push_id = request.json['id']
     plate_no = request.json['body']["result"]["PlateResult"]["license"]
     #remove white space from plate number
