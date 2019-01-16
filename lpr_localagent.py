@@ -74,6 +74,7 @@ lpr_ftp_server = config['LPR_MODULE']['lpr_ftp_server']
 lpr_ftp_user = config['LPR_MODULE']['lpr_ftp_user']
 lpr_ftp_pswd = config['LPR_MODULE']['lpr_ftp_pswd']
 lpr_ftp_folder = config['LPR_MODULE']['lpr_ftp_folder']
+lpr_ftp_temp_source = config['LPR_MODULE']['lpr_ftp_temp_source']
 LPR_CommModule_IP = config['LPR_MODULE']['LPR_CommModule_IP']
 LPR_CommModule_Port = int(config['LPR_MODULE']['LPR_CommModule_Port'])
 LPR_CommModule_IP_Receive = config['LPR_MODULE']['LPR_CommModule_IP_Receive']
@@ -258,7 +259,7 @@ def push_plate_no():
             print("xxxxxx"+maxpark_cam_id)
 
 
-    picture_name = lpr_ftp_folder + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
+    picture_name = lpr_ftp_temp_source + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
     print(picture_name)
     # picture_name = datenow + maxpark_cam_id + plate_no + ".jpg"
 

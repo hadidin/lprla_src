@@ -44,8 +44,10 @@ lpr_ftp_server = 127.0.0.1
 lpr_ftp_user = hadi
 lpr_ftp_pswd = hadi123
 lpr_ftp_folder = vehicle_plate
-lpr_ftp_source = /
-#lpr_ftp_destination = C:\Users\john\Desktop\
+
+#for windows develope just folder name..but for linux compile should use full path
+lpr_ftp_temp_source = vehicle_plate
+
 lpr_ftp_interval = 1
 
 #led display
