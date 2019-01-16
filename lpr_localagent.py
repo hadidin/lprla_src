@@ -33,6 +33,7 @@ from flask import abort
 from flask import request
 # import requests
 
+import pathlib
 
 app = Flask(__name__)
 
@@ -46,6 +47,8 @@ else:
 
 config = configparser.ConfigParser()
 config.read(os.path.join(actual__file__dir, 'conf/config.ini'))
+
+
 
 
 # Communications Module
@@ -201,10 +204,10 @@ def main():
     #                                        SEND_BUFFER_SIZE,
     #                                        RECV_BUFFER_SIZE)
 
-    os.chdir(os.path.dirname(__file__))
-    print(os.getcwd())
+    current_dir = pathlib.Path(__file__).parent
+    # current_file = pathlib.Path(__file__)
     logger.info('===========current directory')
-    logger.info(os.getcwd())
+    logger.info(current_dir)
 
     if int(config['LocalAgent']['Http']):
         # Auto configure LAN IP and start Flask as HTTP
