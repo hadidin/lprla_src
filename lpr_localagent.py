@@ -201,6 +201,10 @@ def main():
     #                                        SEND_BUFFER_SIZE,
     #                                        RECV_BUFFER_SIZE)
 
+    os.chdir(os.path.dirname(__file__))
+    print(os.getcwd())
+    logger.info('===========current directory')
+    logger.info(os.getcwd())
 
     if int(config['LocalAgent']['Http']):
         # Auto configure LAN IP and start Flask as HTTP
@@ -266,8 +270,13 @@ def push_plate_no():
     print("Plateno=" + plate_no + "<<>>Camera_sn=" + camera_id+"<<>>Maxpark_camera_id="+maxpark_cam_id)
     imgdata=base64.b64decode(base64img)
     filename = picture_name  # I assume you have a way of picking unique filenames
+
+
+
+
     with open(filename, 'wb') as f:
         f.write(imgdata)
+        f.close()
 
     # session = ftplib.FTP('example.com', 'username', 'password')
     # file = open('cup.mp4', 'rb')  # file to send
@@ -278,6 +287,7 @@ def push_plate_no():
 
     # upload picture to ftp folder
     logger.info("===================Starting upload file to ftp folder==============")
+    logger.info(filename)
 
     try:
         ftp = FTP(lpr_ftp_server)
