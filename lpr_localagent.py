@@ -50,29 +50,14 @@ config.read(os.path.join(actual__file__dir, 'conf/config.ini'))
 
 # Communications Module
 #======================
-MaxParkCommModule_IP = config['CommModule']['CommModule_IP']  # IP Address of MaxPark Comm Module
-MaxParkCommModule_Port = int(config['CommModule']['CommModule_Port'])  # Port used
+# MaxParkCommModule_IP = config['CommModule']['CommModule_IP']  # IP Address of MaxPark Comm Module
+# MaxParkCommModule_Port = int(config['CommModule']['CommModule_Port'])  # Port used
 SOCKET_TIMEOUT = int(config['CommModule']['SOCKET_TIMEOUT'])  # timeout units in seconds
 SEND_BUFFER_SIZE = int(config['CommModule']['SEND_BUFFER_SIZE'])
 RECV_BUFFER_SIZE = int(config['CommModule']['RECV_BUFFER_SIZE'])
 ENABLE_PERIODIC_IDLE_MSG = int(config['CommModule']['ENABLE_PERIODIC_IDLE_MESSAGE'])
 IDLE_TASK_TIMER = int(config['CommModule']['IDLE_TASK_TIMER']) # run Idle task every x minutes -> units in minutes
 
-
-
-# FTP Module
-#===========
-MaxPark_FTP_Server = config['FTP']['FTP_Server']
-MaxPark_FTP_Username = config['FTP']['FTP_Username']
-MaxPark_FTP_Password = config['FTP']['FTP_Password']
-MaxPark_FTP_Source = config['FTP']['Source']
-RPi3_Destination = config['FTP']['Destination']
-MaxPark_FTP_Interval = int(config['FTP']['FTP_Interval'])
-
-
-# AWS Module
-#===========
-AWS_Bucket_Name = config['AWS']['AWS_BUCKET_NAME']
 
 
 # General Parameters
@@ -236,92 +221,22 @@ def test_get():
     return "<!DOCTYPE html><html><head><title>Flask Testing GET Method</title></head><body><h1>HTML Test Page</h1><p>Indicates GET method is successful.</p></body></html>", 200
 
 
-@app.route('/localagent/v1/ping_parking_server', methods=['POST'])
-def v1_ping_parking_server():
-    if (not request.json) or (not 'ping' in request.json):
-        abort(400)
-
-    ping_data = request.json['ping'] # ping Parking Server
-
-    if (ping_data != "000000000000"):
-        abort(400)
-
-    logger.info("")
-    logger.info("--- v1_ping_parking_server ---")
-    logger.info("Ping Parking Server, Ping = " + ping_data)
-
-    logger.info("Communicating with Comms Module")
-    response = IDLE_Msg.IDLE_Message(MaxParkCommModule_IP,
-                                     MaxParkCommModule_Port,
-                                     SOCKET_TIMEOUT,
-                                     SEND_BUFFER_SIZE,
-                                     RECV_BUFFER_SIZE,
-                                     ping_data)
-    logger.info("response : {0}".format(response))
-
-    logger.info("Send to PNS Server")
-
-    return_json = {
-        'err_code': response[0]
-    }
-
-    returnHttpStatus = 200
-    if response[0] != ERROR_Code.errSuccess:
-        returnHttpStatus= 400
-
-    return jsonify(return_json), returnHttpStatus
-
-@app.route('/localagent/v1/get_ticket', methods=['POST'])
-def v1_get_ticket():
-    if (not request.json) or (not 'odata' in request.json):
-        abort(400)
-    #sleep(9)
-
-    original_barcode_id = request.json['odata']  # 2D barcode data.
-    logger.info("")
-    logger.info("--- v1_get_ticket ---")
-    logger.info("Received from PNS Server")
-    logger.info("odata= " + original_barcode_id)
-
-    if (g_intIs_Demo_Mode > 0):
-        logger.info("Communicating in Demo Mode")
-        # AUT_Req.AUT_RequestDemo_ExtractMockErrcode(original_barcode_id)
-        # AUT_Req.AUT_RequestDemo_ExtractMockExitGracePeriod(original_barcode_id)
-        response = GET_Req.GET_RequestDemo(original_barcode_id)
-    else:
-        logger.info("Communicating with Comms Module")
-        response = GET_Req.GET_Request(MaxParkCommModule_IP,
-                                       MaxParkCommModule_Port,
-                                       SOCKET_TIMEOUT,
-                                       SEND_BUFFER_SIZE,
-                                       RECV_BUFFER_SIZE,
-                                       original_barcode_id)
-
-    logger.info("response : {0}".format(response))
-    logger.info("Send to PNS Server")
-
-    return_json = {
-        'err_code': response[0],
-        'odata': response[1],
-        'ticket': response[2],
-        'entry': response[3],
-        'exit': response[4],
-        'value': response[5]
-    }
-
-    returnHttpStatus = 200
-    if response[0] != ERROR_Code.errSuccess:
-        returnHttpStatus= 400
-
-    return jsonify(return_json), returnHttpStatus
-
-
 
 #init by hadi din
+
+
+def check_pns_whitelisted_ip():
+    if (request.remote_addr not in g_PNSAppServices_IPWhiteList):
+        logger.warning("Rejected following IP not in the white list= " + request.remote_addr)
+        abort(403)
+
+
 @app.route('/localagent/v1/push_plate_no', methods=['POST'])
 def push_plate_no():
 
     # print(request.data)
+    check_pns_whitelisted_ip()
+
     push_id = request.json['id']
     plate_no = request.json['body']["result"]["PlateResult"]["license"]
     #remove white space from plate number
@@ -362,28 +277,29 @@ def push_plate_no():
 
     # upload picture to ftp folder
     logger.info("===================Starting upload file to ftp folder==============")
-    # ftp = FTP(lpr_ftp_server)
-    # try:
-    #     ftp.login(user=lpr_ftp_user, passwd=lpr_ftp_pswd)
-    #     # ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
-    #     ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
-    #     ftp.quit()
-    #
-    #     #remove temp file after upload to ftp success
-    #     try:
-    #         os.remove(filename)
-    #     except os.error as e:
-    #         logger.error("Failed to delete temp file %s" % e)
-    #
-    # except ftplib.error_perm as e:
-    #     logger.error("Failed to connect to ftp server using given info host=%s , username=%s , password=%s ,folder=%s , %s" % (lpr_ftp_server,lpr_ftp_user,lpr_ftp_pswd,lpr_ftp_folder,e) )
 
-    print("lpr_ftp_server=" + lpr_ftp_server + "<<>>lpr_ftp_user=" + lpr_ftp_user + "<<>>lpr_ftp_pswd=" + lpr_ftp_pswd)
-    session = ftplib.FTP(lpr_ftp_server, lpr_ftp_user, lpr_ftp_pswd)
-    file = open(filename, 'rb')  # file to send
-    session.storbinary('STOR ' + filename, file)  # send the file
-    file.close()  # close file and FTP
-    session.quit()
+    try:
+        ftp = FTP(lpr_ftp_server)
+        ftp.login(user=lpr_ftp_user, passwd=lpr_ftp_pswd)
+        # ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
+        ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
+        ftp.quit()
+
+        #remove temp file after upload to ftp success
+        try:
+            os.remove(filename)
+        except os.error as e:
+            logger.error("Failed to delete temp file %s" % e)
+
+    except ftplib.error_perm as e:
+        logger.error("Failed to connect to ftp server using given info host=%s , username=%s , password=%s ,folder=%s , %s" % (lpr_ftp_server,lpr_ftp_user,lpr_ftp_pswd,lpr_ftp_folder,e) )
+
+    # print("lpr_ftp_server=" + lpr_ftp_server + "<<>>lpr_ftp_user=" + lpr_ftp_user + "<<>>lpr_ftp_pswd=" + lpr_ftp_pswd)
+    # session = ftplib.FTP(lpr_ftp_server, lpr_ftp_user, lpr_ftp_pswd)
+    # file = open(filename, 'rb')  # file to send
+    # session.storbinary('STOR ' + filename, file)  # send the file
+    # file.close()  # close file and FTP
+    # session.quit()
 
 
     # time.sleep(5)
