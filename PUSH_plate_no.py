@@ -11,13 +11,13 @@ import sys
 import datetime
 import select
 from array import array
-import lpr_localagent
+#import lpr_localagent
 import ERROR_Code
 import LA_Commons
 import logging
 from datetime import timedelta , datetime
 
-from pprint import pprint
+#from pprint import pprint
 
 
 logger = logging.getLogger(__name__)  # module-level logger, so that filename is printed in log.
