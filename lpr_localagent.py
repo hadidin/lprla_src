@@ -14,12 +14,12 @@ logger = logging.getLogger() # Get the 'root' logger & configure it. Run multipl
 #  since there is only one instance.
 
 
-import IDLE_Msg
-import ERROR_Code
-import GET_Req
+# import IDLE_Msg
+# import ERROR_Code
+# import GET_Req
 import PUSH_plate_no
-import COMM_LISTENER
-import kp_catch_trx
+# import COMM_LISTENER
+# import kp_catch_trx
 import lpr_push_display
 import base64
 import time
@@ -29,9 +29,9 @@ from ftplib import FTP
 
 from flask import Flask, jsonify
 from flask import abort
-from flask import make_response
+# from flask import make_response
 from flask import request
-import requests
+# import requests
 
 
 app = Flask(__name__)
