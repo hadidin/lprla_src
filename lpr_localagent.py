@@ -267,6 +267,7 @@ def push_plate_no():
 
 
     picture_name = lpr_ftp_temp_source + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
+    filename_only =  datenow + maxpark_cam_id + plate_no + ".jpg"
     print(picture_name)
     # picture_name = datenow + maxpark_cam_id + plate_no + ".jpg"
 
@@ -296,7 +297,7 @@ def push_plate_no():
         ftp = FTP(lpr_ftp_server)
         ftp.login(user=lpr_ftp_user, passwd=lpr_ftp_pswd)
         # ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
-        ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
+        ftp.storbinary('STOR ' + lpr_ftp_folder + '/' + filename_only, open(filename, 'rb'))
         ftp.quit()
 
         #remove temp file after upload to ftp success
