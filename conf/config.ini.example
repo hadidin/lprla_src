@@ -60,3 +60,4 @@ lpr_led_text_TK = { "message": [ { "text": "<plate_no>" }, { "text": "Ticket Iss
 
 #lpr backend url
 lpr_server_url = http://127.0.0.1:8080/v1
+lpr_portal_url = http://127.0.0.1/kiplepark-localpsm/public

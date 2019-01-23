@@ -21,6 +21,7 @@ import PUSH_plate_no
 # import COMM_LISTENER
 # import kp_catch_trx
 import lpr_push_display
+import kp_local_psm
 import base64
 import time
 import ftplib
@@ -83,6 +84,7 @@ LPR_CommModule_Port = int(config['LPR_MODULE']['LPR_CommModule_Port'])
 LPR_CommModule_IP_Receive = config['LPR_MODULE']['LPR_CommModule_IP_Receive']
 LPR_CommModule_Port_Receive = int(config['LPR_MODULE']['LPR_CommModule_Port_Receive'])
 lpr_server_url = config['LPR_MODULE']['lpr_server_url']
+lpr_server_url = config['LPR_MODULE']['lpr_portal_url']
 txtSN = config['LPR_MODULE']['lpr_led_text_SN']
 txtSX = config['LPR_MODULE']['lpr_led_text_SX']
 txtSA = config['LPR_MODULE']['lpr_led_text_SA']
@@ -222,6 +224,7 @@ def main():
                 ssl_context=context)
 
 
+
     return
 
 @app.route('/testget', methods=['GET'])
@@ -243,7 +246,12 @@ def check_pns_whitelisted_ip():
 def push_plate_no():
 
     # print(request.data)
+    # exit();
     check_pns_whitelisted_ip()
+
+    #send data to kiplepark cloud
+    json_text=str(request.data.decode("utf-8"))
+    kp_local_psm.push_trx(lpr_server_url,json_text)
 
     push_id = request.json['id']
     plate_no = request.json['body']["result"]["PlateResult"]["license"]
@@ -251,6 +259,8 @@ def push_plate_no():
     plate_no=plate_no.replace(" ", "")
     camera_id = request.json['body']["vzid"]["sn"]
     base64img = request.json['body']["result"]["PlateResult"]["imageFile"]
+    big_image = request.json['body']["result"]["PlateResult"]["imageFilePath"]
+    small_image = request.json['body']["result"]["PlateResult"]["imageFragmentFilePath"]
 
     datenow=time.strftime("%Y%m%d")
 
@@ -273,6 +283,7 @@ def push_plate_no():
 
     print("Plateno=" + plate_no + "<<>>Camera_sn=" + camera_id+"<<>>Maxpark_camera_id="+maxpark_cam_id)
     imgdata=base64.b64decode(base64img)
+
     filename = picture_name  # I assume you have a way of picking unique filenames
 
 
