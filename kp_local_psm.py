@@ -1,6 +1,8 @@
 import requests
 import logging
 import json
+import os
+import wget
 from datetime import timedelta, datetime
 
 logger = logging.getLogger(__name__)  # module-level logger, so that filename is printed in log.
@@ -38,3 +40,25 @@ def push_trx(kp_server_url,data):
         return RETURN_STATUSBOOL
 
     logger.info("Status Code= " + str(r.status_code))
+
+
+def download_file(dir_name,url):
+    working_directory = os.getcwd()
+    filename = None
+
+    # if directory exists just catch error
+    try:
+        os.mkdir(dir_name)
+    except:
+        pass
+
+    try:
+        os.chdir(dir_name)
+        filename = wget.download(url)
+    except Exception as inst:
+        print("had exception on wget: ", inst)
+        pass
+
+    # reset directory
+    os.chdir(working_directory)
+    return filename

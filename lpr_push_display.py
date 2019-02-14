@@ -24,37 +24,41 @@ def push_display(lpr_server_url,textdic,push_id,camera_sn):
     text2 = base64.b64encode(text2.encode())
     text2 = text2.decode("utf-8")
 
-    json_payload =  {
-                        "id": push_id,
-                        "sn": camera_sn,
-                        "operator": [
-                            {
-                                "type": "led_display",
-                                # "messages": [text1,text2],
-                                "messages": {
-                                    "line1": text1,
-                                    "line2": text2
-                                },
-                                "time": 30
-                            }
-                        ]
-                    }
-    logger.debug(json_payload)
-    print(json_payload)
-    # my_headers = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZDA2YmE4My05YTllLTQ3N2EtYjNjMy1jYjM5ZDU1NzYxNDgiLCJ1bmlxdWVfbmFtZSI6ImRkMDZiYTgzLTlhOWUtNDc3YS1iM2MzLWNiMzlkNTU3NjE0OCIsImp0aSI6IjdiMmQ4YWRhLWRiNzYtNDJlNC1iZDZjLWRjM2YxMmY0YjgyOSIsImlhdCI6IjE1NDI4MDM0NjMuMzc0MTgiLCJBY2NvdW50OklkIjoiZGQwNmJhODMtOWE5ZS00NzdhLWIzYzMtY2IzOWQ1NTc2MTQ4IiwiQWNjb3VudDpVc2VyTmFtZSI6InNhdHlhLnNyZWVAZ3JlZW5wYWNrZXQuY29tIiwiQWNjb3VudDpUYWciOiJLaXBsZVBheSIsIlVNUzpUb2tlbiI6InlQUHd4cTdCRXcyc3dYNFdrbkp3b1Z5alVGcWxvcHRoIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVVNFUiIsIm5iZiI6MTU0Mjc3NDY2MywiZXhwIjoxNTQzMjA2NjY1LCJpc3MiOiJLaXBsZSIsImF1ZCI6IktpcGxlIn0.pU2Ey6GKHpY0BzqiWZlLl0pxPIPGjel3FjrDgoif4q8'}
+    return_json = {
+        "id": push_id,
+        "sn": camera_sn,
+        "xx": textdic['message'][1]["text"],
+        "operator": [
+            {
+                "type": "led_display",
+                "messages": {
+                    "line1": text1,
+                    "line2": text2
+                },
+                "time": 30
+            }
+        ]
+    }
 
-    try:
-        # r = requests.post(url, json=json_payload, headers=my_headers, timeout=4)
-        r = requests.put(url, json=json_payload, timeout=4)
-        # logger.info("send put method to LPR" + json.dumps(json_payload, indent=4, sort_keys=True))
-        logger.info("send put method to LPR url=%s , body=%s" % (url, json.dumps(json_payload)))
-    except requests.exceptions.ConnectionError:
-        logger.warning("Timeout connecting to LPR Server")
-        RETURN_STATUSBOOL = False
-        return RETURN_STATUSBOOL
-    except requests.exceptions.Timeout:
-        logger.warning("Timeout reading from LPR Server")
-        RETURN_STATUSBOOL = False
-        return RETURN_STATUSBOOL
 
-    logger.info("Status Code= " + str(r.status_code))
+
+    return return_json
+    # logger.debug(json_payload)
+    # print(json_payload)
+    # # my_headers = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZDA2YmE4My05YTllLTQ3N2EtYjNjMy1jYjM5ZDU1NzYxNDgiLCJ1bmlxdWVfbmFtZSI6ImRkMDZiYTgzLTlhOWUtNDc3YS1iM2MzLWNiMzlkNTU3NjE0OCIsImp0aSI6IjdiMmQ4YWRhLWRiNzYtNDJlNC1iZDZjLWRjM2YxMmY0YjgyOSIsImlhdCI6IjE1NDI4MDM0NjMuMzc0MTgiLCJBY2NvdW50OklkIjoiZGQwNmJhODMtOWE5ZS00NzdhLWIzYzMtY2IzOWQ1NTc2MTQ4IiwiQWNjb3VudDpVc2VyTmFtZSI6InNhdHlhLnNyZWVAZ3JlZW5wYWNrZXQuY29tIiwiQWNjb3VudDpUYWciOiJLaXBsZVBheSIsIlVNUzpUb2tlbiI6InlQUHd4cTdCRXcyc3dYNFdrbkp3b1Z5alVGcWxvcHRoIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVVNFUiIsIm5iZiI6MTU0Mjc3NDY2MywiZXhwIjoxNTQzMjA2NjY1LCJpc3MiOiJLaXBsZSIsImF1ZCI6IktpcGxlIn0.pU2Ey6GKHpY0BzqiWZlLl0pxPIPGjel3FjrDgoif4q8'}
+    #
+    # try:
+    #     # r = requests.post(url, json=json_payload, headers=my_headers, timeout=4)
+    #     r = requests.put(url, json=json_payload, timeout=4)
+    #     # logger.info("send put method to LPR" + json.dumps(json_payload, indent=4, sort_keys=True))
+    #     logger.info("send put method to LPR url=%s , body=%s" % (url, json.dumps(json_payload)))
+    # except requests.exceptions.ConnectionError:
+    #     logger.warning("Timeout connecting to LPR Server")
+    #     RETURN_STATUSBOOL = False
+    #     return RETURN_STATUSBOOL
+    # except requests.exceptions.Timeout:
+    #     logger.warning("Timeout reading from LPR Server")
+    #     RETURN_STATUSBOOL = False
+    #     return RETURN_STATUSBOOL
+    #
+    # logger.info("Status Code= " + str(r.status_code))

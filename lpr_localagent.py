@@ -5,6 +5,7 @@ import sys
 import logging
 import logging.handlers
 import json
+import wget
 
 #for handle config from txt file
 import configparser
@@ -84,7 +85,7 @@ LPR_CommModule_Port = int(config['LPR_MODULE']['LPR_CommModule_Port'])
 LPR_CommModule_IP_Receive = config['LPR_MODULE']['LPR_CommModule_IP_Receive']
 LPR_CommModule_Port_Receive = int(config['LPR_MODULE']['LPR_CommModule_Port_Receive'])
 lpr_server_url = config['LPR_MODULE']['lpr_server_url']
-lpr_server_url = config['LPR_MODULE']['lpr_portal_url']
+kp_server_url = config['LPR_MODULE']['lpr_portal_url']
 txtSN = config['LPR_MODULE']['lpr_led_text_SN']
 txtSX = config['LPR_MODULE']['lpr_led_text_SX']
 txtSA = config['LPR_MODULE']['lpr_led_text_SA']
@@ -251,7 +252,7 @@ def push_plate_no():
 
     #send data to kiplepark cloud
     json_text=str(request.data.decode("utf-8"))
-    kp_local_psm.push_trx(lpr_server_url,json_text)
+    kp_local_psm.push_trx(kp_server_url,json_text)
 
     push_id = request.json['id']
     plate_no = request.json['body']["result"]["PlateResult"]["license"]
@@ -276,29 +277,15 @@ def push_plate_no():
             print("xxxxxx"+maxpark_cam_id)
 
 
-    picture_name = lpr_ftp_temp_source + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
+    # picture_name = lpr_ftp_temp_source + "/" + datenow + maxpark_cam_id + plate_no + ".jpg"
     filename_only =  datenow + maxpark_cam_id + plate_no + ".jpg"
-    print(picture_name)
-    # picture_name = datenow + maxpark_cam_id + plate_no + ".jpg"
+
 
     print("Plateno=" + plate_no + "<<>>Camera_sn=" + camera_id+"<<>>Maxpark_camera_id="+maxpark_cam_id)
-    imgdata=base64.b64decode(base64img)
 
-    filename = picture_name  # I assume you have a way of picking unique filenames
-
-
-
-
-    with open(filename, 'wb') as f:
-        f.write(imgdata)
-        f.close()
-
-    # session = ftplib.FTP('example.com', 'username', 'password')
-    # file = open('cup.mp4', 'rb')  # file to send
-    # session.storbinary('STOR ' + 'cup.mp4', file)  # send the file
-    # file.close()  # close file and FTP
-    # session.quit()
-    print(filename)
+    # url = lpr_server_url + big_image
+    url = 'http://f88.dyndns.biz:5001/result/2c0d8fc5-18ae3a4a/2019-02-01/00/001207150318_full.jpg'
+    filename = wget.download(url)
 
     # upload picture to ftp folder
     logger.info("===================Starting upload file to ftp folder==============")
@@ -319,13 +306,6 @@ def push_plate_no():
 
     except ftplib.error_perm as e:
         logger.error("Failed to connect to ftp server using given info host=%s , username=%s , password=%s ,folder=%s , %s" % (lpr_ftp_server,lpr_ftp_user,lpr_ftp_pswd,lpr_ftp_folder,e) )
-
-    # print("lpr_ftp_server=" + lpr_ftp_server + "<<>>lpr_ftp_user=" + lpr_ftp_user + "<<>>lpr_ftp_pswd=" + lpr_ftp_pswd)
-    # session = ftplib.FTP(lpr_ftp_server, lpr_ftp_user, lpr_ftp_pswd)
-    # file = open(filename, 'rb')  # file to send
-    # session.storbinary('STOR ' + filename, file)  # send the file
-    # file.close()  # close file and FTP
-    # session.quit()
 
 
     # time.sleep(5)
@@ -377,28 +357,12 @@ def push_plate_no():
         data = base64.b64encode(text2display.encode())
         data_utf = data.decode("utf-8")
 
-
-        #push to device operation
+        # push to device operation
         textdic = json.loads(text2display)
-        lpr_push_display.push_display(lpr_server_url, textdic, push_id, camera_id)
+        lpr_display=lpr_push_display.push_display(lpr_server_url, textdic, push_id, camera_id)
 
-        #send data to kiplepark cloud
-        # kp_catch_trx.catch_trx('https://sandbox.kiplepark.com',response,service,plate_no,'SIG0030',camera_id)
-
-
-        return_json =   {
-                            "operation": [
-                                {
-                                    "type": "open_gate"
-                                },
-                                {
-                                    "type": "led_display",
-                                    "msg": textdic
-                                }
-                            ]
-                        }
         returnHttpStatus = 200
-        return jsonify(return_json), returnHttpStatus
+        return jsonify(lpr_display), returnHttpStatus
 
 
 if __name__ == "__main__":
