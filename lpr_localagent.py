@@ -283,8 +283,8 @@ def push_plate_no():
 
     print("Plateno=" + plate_no + "<<>>Camera_sn=" + camera_id+"<<>>Maxpark_camera_id="+maxpark_cam_id)
 
-    # url = lpr_server_url + big_image
-    url = 'http://f88.dyndns.biz:5001/result/2c0d8fc5-18ae3a4a/2019-02-01/00/001207150318_full.jpg'
+    url = lpr_server_url + big_image
+    # url = 'http://f88.dyndns.biz:5001/result/2c0d8fc5-18ae3a4a/2019-02-01/00/001207150318_full.jpg'
     filename = wget.download(url)
 
     # upload picture to ftp folder
