@@ -6,6 +6,7 @@ import logging
 import logging.handlers
 import json
 import wget
+import lpr_local_psm_comm
 
 #for handle config from txt file
 import configparser
@@ -339,6 +340,13 @@ def push_plate_no():
             'filename': filename,
             'ftp_server': lpr_ftp_server
         }
+
+        # update entry log
+        check_camera_extra_info = lpr_local_psm_comm.check_camera_db_info(camera_id, db_host, db_username, db_pswd, db_name)
+        python_obj = json.loads(check_camera_extra_info)
+        in_out_flag = python_obj["in_out_flag"]
+        lane_id = python_obj["lane_id"]
+        lpr_local_psm_comm.insert_to_db(camera_id,plate_no,small_image,big_image,db_host,db_username,db_pswd,db_name,in_out_flag,99,0,9,9,lane_id,'Failed to get comm with maxpark')
         returnHttpStatus = 400
         return jsonify(return_json), returnHttpStatus
     else:
