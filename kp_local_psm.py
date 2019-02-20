@@ -12,7 +12,7 @@ def push_trx(kp_server_url,data):
 
     data = json.loads(data)
 
-    print(data);
+    #print(data);
 
 
     # Return a Bool.

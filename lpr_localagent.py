@@ -23,6 +23,7 @@ import PUSH_plate_no
 # import kp_catch_trx
 import lpr_push_display
 import kp_local_psm
+import lpr_local_psm_comm
 import base64
 import time
 import ftplib
@@ -82,8 +83,8 @@ lpr_ftp_folder = config['LPR_MODULE']['lpr_ftp_folder']
 lpr_ftp_temp_source = config['LPR_MODULE']['lpr_ftp_temp_source']
 LPR_CommModule_IP = config['LPR_MODULE']['LPR_CommModule_IP']
 LPR_CommModule_Port = int(config['LPR_MODULE']['LPR_CommModule_Port'])
-LPR_CommModule_IP_Receive = config['LPR_MODULE']['LPR_CommModule_IP_Receive']
-LPR_CommModule_Port_Receive = int(config['LPR_MODULE']['LPR_CommModule_Port_Receive'])
+# LPR_CommModule_IP_Receive = config['LPR_MODULE']['LPR_CommModule_IP_Receive']
+#LPR_CommModule_Port_Receive = int(config['LPR_MODULE']['LPR_CommModule_Port_Receive'])
 lpr_server_url = config['LPR_MODULE']['lpr_server_url']
 kp_server_url = config['LPR_MODULE']['lpr_portal_url']
 txtSN = config['LPR_MODULE']['lpr_led_text_SN']
@@ -92,6 +93,12 @@ txtSA = config['LPR_MODULE']['lpr_led_text_SA']
 txtSE = config['LPR_MODULE']['lpr_led_text_SE']
 txtSB = config['LPR_MODULE']['lpr_led_text_SB']
 txtTK = config['LPR_MODULE']['lpr_led_text_TK']
+
+#psm module
+db_host = config['LOCAL_PSM']['db_host']
+db_username = config['LOCAL_PSM']['db_username']
+db_pswd = config['LOCAL_PSM']['db_pswd']
+db_name = config['LOCAL_PSM']['db_name']
 
 
 # Detect OS in order to detect LAN IP of localhost automatically
@@ -252,7 +259,8 @@ def push_plate_no():
 
     #send data to kiplepark cloud
     json_text=str(request.data.decode("utf-8"))
-    kp_local_psm.push_trx(kp_server_url,json_text)
+    # print(json_text)
+    #kp_local_psm.push_trx(kp_server_url,json_text)
 
     push_id = request.json['id']
     plate_no = request.json['body']["result"]["PlateResult"]["license"]
@@ -283,8 +291,8 @@ def push_plate_no():
 
     print("Plateno=" + plate_no + "<<>>Camera_sn=" + camera_id+"<<>>Maxpark_camera_id="+maxpark_cam_id)
 
-    url = lpr_server_url + big_image
-    # url = 'http://f88.dyndns.biz:5001/result/2c0d8fc5-18ae3a4a/2019-02-01/00/001207150318_full.jpg'
+    # url = lpr_server_url + big_image
+    url = 'http://f88.dyndns.biz:5001/result/2c0d8fc5-18ae3a4a/2019-02-01/00/001207150318_full.jpg'
     filename = wget.download(url)
 
     # upload picture to ftp folder
@@ -360,6 +368,12 @@ def push_plate_no():
         # push to device operation
         textdic = json.loads(text2display)
         lpr_display=lpr_push_display.push_display(lpr_server_url, textdic, push_id, camera_id)
+
+        # push logs to localpsm
+        lpr_local_psm_comm.push_log(response,camera_id,plate_no,small_image,big_image,db_host,db_username,db_pswd,db_name,text2display)
+
+
+
 
         returnHttpStatus = 200
         return jsonify(lpr_display), returnHttpStatus
