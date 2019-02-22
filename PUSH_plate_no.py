@@ -162,7 +162,7 @@ def push_plate_no(host, port, socket_timeout, send_buffer_size, recv_buffer_size
     ##################################################
     my_RECV_MSG = ''.join(chr(i) for i in RECV_MSG)
 
-    status = msg[23:25]
+    status = msg[23:33]
     print('response= '+status)
 
     return (status)

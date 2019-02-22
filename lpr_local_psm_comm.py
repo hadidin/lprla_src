@@ -10,7 +10,7 @@ import flask
 
 logger = logging.getLogger(__name__)  # module-level logger, so that filename is printed in log.
 
-def push_log(response,camera_sn,plate_no,small_image,big_image,db_host,db_username,db_pswd,db_name,text2display):
+def push_log(response,camera_sn,plate_no,small_image,big_image,db_host,db_username,db_pswd,db_name,text2display,service,vendor_ticket):
 
     #camera extra info
     check_camera_extra_info = check_camera_db_info(camera_sn, db_host, db_username, db_pswd, db_name)
@@ -72,7 +72,7 @@ def push_log(response,camera_sn,plate_no,small_image,big_image,db_host,db_userna
         is_season_subscriber = 0
         parking_type = 0
 
-    insert_to_db(camera_sn,plate_no,small_image,big_image,db_host,db_username,db_pswd,db_name,in_out_flag,check_result,is_success,is_season_subscriber,parking_type,lane_id,text2display)
+    insert_to_db(camera_sn,plate_no,small_image,big_image,db_host,db_username,db_pswd,db_name,in_out_flag,check_result,is_success,is_season_subscriber,parking_type,lane_id,text2display,service,vendor_ticket)
 
     # return return_json
 
@@ -111,17 +111,20 @@ def check_camera_db_info(camera_sn,db_host,db_username,db_pswd,db_name):
     return json.dumps(return_json)
 
 
-def insert_to_db(camera_sn,plate_no,small_image,big_image,db_host,db_username,db_pswd,db_name,in_out_flag,check_result,is_success,is_season_subscriber,parking_type,lane_id,failed_remark):
+def insert_to_db(camera_sn,plate_no,small_image,big_image,db_host,db_username,db_pswd,db_name,in_out_flag,check_result,is_success,is_season_subscriber,parking_type,lane_id,failed_remark,service,vendor_ticket):
     datenow = strftime("%Y-%m-%d %H:%M:%S")
+    if(service=='TCS'):
+        vendor_ticket=None
+
     try:
         connection = mysql.connector.connect(host=db_host,
                                                   database=db_name,
                                                   user=db_username,
                                                   password=db_pswd)
-        sql_insert_query = """insert into psm_entry_log set lane_id= %s, camera_sn= %s, plate_no= %s, small_picture= %s, big_picture= %s, in_out_flag= %s, is_success= %s, check_result= %s, is_season_subscriber= %s, parking_type= %s, failed_remark= %s, create_time= %s """
+        sql_insert_query = """insert into psm_entry_log set lane_id= %s, camera_sn= %s, plate_no= %s, small_picture= %s, big_picture= %s, in_out_flag= %s, is_success= %s, check_result= %s, is_season_subscriber= %s, parking_type= %s, failed_remark= %s, create_time= %s, vendor_ticket_id= %s """
 
         cursor = connection.cursor()
-        cursor.execute(sql_insert_query, (lane_id,camera_sn,plate_no,small_image,big_image,in_out_flag,is_success,check_result,is_season_subscriber,parking_type,failed_remark,datenow))
+        cursor.execute(sql_insert_query, (lane_id,camera_sn,plate_no,small_image,big_image,in_out_flag,is_success,check_result,is_season_subscriber,parking_type,failed_remark,datenow,vendor_ticket))
         connection.commit()
     except mysql.connector.Error as error:
         print("Failed to get record from database: {}".format(error))

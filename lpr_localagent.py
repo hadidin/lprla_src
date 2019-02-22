@@ -292,8 +292,8 @@ def push_plate_no():
 
     print("Plateno=" + plate_no + "<<>>Camera_sn=" + camera_id+"<<>>Maxpark_camera_id="+maxpark_cam_id)
 
-    url = lpr_server_url + big_image
-    # url = 'http://f88.dyndns.biz:5001/result/2c0d8fc5-18ae3a4a/2019-02-01/00/001207150318_full.jpg'
+    # url = lpr_server_url + big_image
+    url = 'http://f88.dyndns.biz:5001/result/2c0d8fc5-18ae3a4a/2019-02-01/00/001207150318_full.jpg'
     filename = wget.download(url)
 
     # upload picture to ftp folder
@@ -346,13 +346,21 @@ def push_plate_no():
         python_obj = json.loads(check_camera_extra_info)
         in_out_flag = python_obj["in_out_flag"]
         lane_id = python_obj["lane_id"]
-        lpr_local_psm_comm.insert_to_db(camera_id,plate_no,small_image,big_image,db_host,db_username,db_pswd,db_name,in_out_flag,99,0,9,9,lane_id,'Failed to get comm with maxpark')
+        lpr_local_psm_comm.insert_to_db(camera_id,plate_no,small_image,big_image,db_host,db_username,db_pswd,db_name,in_out_flag,99,0,9,9,lane_id,'Failed to get comm with maxpark','TCS','')
         returnHttpStatus = 400
         return jsonify(return_json), returnHttpStatus
     else:
         # logger.info("Send to PNS Server")
 
         service='TCS'
+
+        response_retrieve=response
+
+        response=response_retrieve[0:2]
+        # print(response);
+        # exit()
+
+        vendor_ticket=response_retrieve[2:10]
 
         if (response == 'SN'):
             text2display = txtSN
@@ -378,7 +386,7 @@ def push_plate_no():
         lpr_display=lpr_push_display.push_display(lpr_server_url, textdic, push_id, camera_id)
 
         # push logs to localpsm
-        lpr_local_psm_comm.push_log(response,camera_id,plate_no,small_image,big_image,db_host,db_username,db_pswd,db_name,text2display)
+        lpr_local_psm_comm.push_log(response,camera_id,plate_no,small_image,big_image,db_host,db_username,db_pswd,db_name,text2display,service,vendor_ticket)
 
 
 
